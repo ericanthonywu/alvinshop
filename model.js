@@ -42,7 +42,7 @@ const productSchema = new mongoose.Schema({
     gambar: {type: String, required: true, trim: true, unique: true},
     title: String,
     description: String,
-    genre: [{type: mongoose.Schema.Types.ObjectID, ref: 'genre'}],
+    genre: [{type: mongoose.Schema.Types.ObjectID, ref: 'category'}],
     price: {type: Number, default: 0},
     stock: {type: Number, default: 0},
     youtubeLink: String
