@@ -19,14 +19,16 @@ const adminSchema = new mongoose.Schema({
 
 exports.admin = mongoose.model("admin", adminSchema);
 
+const cartSchema = new mongoose.Schema({
+    productId: {type: mongoose.Schema.Types.ObjectID, ref: 'product'},
+    qty: Number,
+}, {timestamps: true})
+
 const userSchema = new mongoose.Schema({
     username: {type: String, required: true, trim: true, unique: true},
     email: {type: String, unique: true},
     password: {type: String, required: true, select: false},
-    cart: [{
-        productId: {type: mongoose.Schema.Types.ObjectID, ref: 'product'},
-        qty: Number
-    }],
+    cart: [cartSchema],
     favourites: [{type: mongoose.Schema.Types.ObjectID, ref: 'product'}]
 }, {timestamps: true});
 
@@ -59,4 +61,12 @@ exports.product = mongoose.model("product", productSchema);
 const categorySchema = new mongoose.Schema({
     name: {type: String, required: true, trim: true, unique: true},
 }, {timestamps: true});
+
 exports.category = mongoose.model("category", categorySchema);
+
+const transactionSchema = new mongoose.Schema({
+    cart: [cartSchema],
+    user: {type: mongoose.Schema.Types.ObjectID, ref: 'user'}
+}, {timestamps: true});
+
+exports.transaction = mongoose.model("transaction", transactionSchema);
