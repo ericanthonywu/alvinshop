@@ -46,7 +46,12 @@ const productSchema = new mongoose.Schema({
     price: {type: Number, default: 0},
     stock: {type: Number, default: 0},
     youtubeLink: String
-}, {timestamps: true});
+}, {
+    weights:{
+        title: 5
+    },
+    timestamps: true
+});
 
 exports.product = mongoose.model("product", productSchema);
 
