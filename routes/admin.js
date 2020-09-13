@@ -8,6 +8,7 @@ const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
 const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
 const fileHandler = require("../middleware/uploadFileMiddleware")
+const {showOurPartner, addOurPartner, deleteOurPartner, editOurPartner} = require("../controller/admin/ourPartnerController");
 const {updateSettings, getSettings, migrateSettings} = require("../controller/admin/settingsController");
 
 router.post('/login', login);
@@ -43,5 +44,10 @@ router.post("/deleteBanner", authMiddleware, deleteBanner)
 router.put("/updateSettings", updateSettings)
 router.get("/getSettings", getSettings)
 router.get("/migrateSettings", migrateSettings)
+
+router.get("/showOurPartner", authMiddleware, showOurPartner)
+router.post("/addOurPartner", fileHandler("our_partner").single("image"), authMiddleware, addOurPartner)
+router.put("/editOurPartner", fileHandler("our_partner").single("image"), authMiddleware, editOurPartner)
+router.post("/deleteOurPartner", authMiddleware, editOurPartner)
 
 module.exports = router;
