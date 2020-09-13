@@ -48,6 +48,6 @@ router.get("/migrateSettings", migrateSettings)
 router.get("/showOurPartner", authMiddleware, showOurPartner)
 router.post("/addOurPartner", fileHandler("our_partner").single("image"), authMiddleware, addOurPartner)
 router.put("/editOurPartner", fileHandler("our_partner").single("image"), authMiddleware, editOurPartner)
-router.post("/deleteOurPartner", authMiddleware, editOurPartner)
+router.post("/deleteOurPartner", authMiddleware, deleteOurPartner)
 
 module.exports = router;
