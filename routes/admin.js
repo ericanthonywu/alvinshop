@@ -39,4 +39,6 @@ router.put("/editBanner", fileHandler("banner").single("image"), authMiddleware,
 router.put("/updateOrderBanner", authMiddleware, updateOrderBanner)
 router.post("/deleteBanner", authMiddleware, deleteBanner)
 
+router.put("/updateSettings")
+
 module.exports = router;

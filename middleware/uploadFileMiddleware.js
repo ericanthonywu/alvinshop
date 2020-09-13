@@ -2,6 +2,8 @@ const multer = require('multer')
 const path = require('path')
 
 /**
+ * Handle file upload
+ *
  * @param {string} prefix
  */
 module.exports = (prefix) => multer({
