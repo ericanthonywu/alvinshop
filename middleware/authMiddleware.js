@@ -2,6 +2,11 @@ const jwt = require('jsonwebtoken')
 const { validationResult } = require('express-validator');
 const path = require('path');
 
+/**
+ * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse|Request<ParamsDictionary, any, any, QueryString.ParsedQs>} req
+ * @param {Response} res
+ * @param {NextFunction|Response<any>} next
+ */
 exports.authMiddleware = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

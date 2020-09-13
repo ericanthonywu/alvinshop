@@ -124,3 +124,6 @@ dist
 .idea/modules.xml
 .idea/runConfigurations/
 alvinshop.iml
+.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047/storage_v2/_src_/schema/niosoapp.sQAiGQ.meta
+uploads/banner/*
+uploads/produk/*

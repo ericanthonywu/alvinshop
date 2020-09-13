@@ -123,8 +123,8 @@ exports.editProduct = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.editImageProduct = (req, res) => {
-    const {files, productId, productImageId} = req
-    if (typeof files == "undefined") {
+    const {file, productId, productImageId} = req
+    if (typeof file == "undefined") {
         return res.status(400).json({message: "Files Required"})
     }
     db("product_image").where({

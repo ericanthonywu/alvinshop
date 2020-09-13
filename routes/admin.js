@@ -6,7 +6,8 @@ const {showCategory, addCategory, deleteCategory, editCategory} = require("../co
 const {showProduk, addProduct, deleteProduct, editImageProduct, editProduct, showImageProductById} = require("../controller/admin/productController");
 const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/orderController");
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
-
+const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
+const fileHandler = require("../middleware/uploadFileMiddleware")
 
 router.post('/login', login);
 router.post('/register', register);
@@ -18,9 +19,9 @@ router.post("/deleteCategory", authMiddleware, deleteCategory)
 
 router.get("/showProduk", authMiddleware, showProduk)
 router.get("/showImageProductById", authMiddleware, showImageProductById)
-router.post("/addProduct", authMiddleware, addProduct)
+router.post("/addProduct", fileHandler("produk").array("image"), authMiddleware, addProduct)
 router.put("/editProduct", authMiddleware, editProduct)
-router.put("/editImageProduct", authMiddleware, editImageProduct)
+router.put("/editImageProduct", fileHandler("produk").single("image"), authMiddleware, editImageProduct)
 router.post("/deleteProduct", authMiddleware, deleteProduct)
 
 router.get("/showOrder", authMiddleware, showOrder)
@@ -31,5 +32,11 @@ router.get("/showDevice", authMiddleware, showDevice)
 router.post("/addDevice", authMiddleware, addDevice)
 router.put("/editDevice", authMiddleware, editDevice)
 router.post("/deleteDevice", authMiddleware, deleteDevice)
+
+router.get("/showBanner", authMiddleware, showBanner)
+router.post("/addBanner", fileHandler("banner").single("image"), authMiddleware, addBanner)
+router.put("/editBanner", fileHandler("banner").single("image"), authMiddleware, editBanner)
+router.put("/updateOrderBanner", authMiddleware, updateOrderBanner)
+router.post("/deleteBanner", authMiddleware, deleteBanner)
 
 module.exports = router;
