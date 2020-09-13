@@ -20,28 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.default" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/user/authController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middleware/uploadFileMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/admin/categoryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/admin/deviceController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +44,7 @@
       </list>
     </option>
   </component>
+  <component name="GOROOT" path="/usr/local/go1.14.1.darwin-amd64" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -75,7 +62,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,8 +76,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controller/admin" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,6 +110,11 @@
       <workItem from="1599182244695" duration="4437000" />
       <workItem from="1599546118388" duration="20029000" />
       <workItem from="1599906250209" duration="437000" />
+      <workItem from="1599907722416" duration="78000" />
+      <workItem from="1599907807164" duration="161000" />
+      <workItem from="1599908016634" duration="505000" />
+      <workItem from="1599984621568" duration="593000" />
+      <workItem from="1600014724898" duration="8713000" />
     </task>
     <servers />
   </component>
@@ -134,14 +142,19 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598550093837" />
-    <state x="528" y="287" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1599736593500">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1599907777065">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1440.900@0.0.1440.900" timestamp="1599907777065" />
     <state x="528" y="287" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1680.1050@0.0.1680.1050" timestamp="1599736593500" />
     <state width="243" height="539" key="HiddenNamespacesPopup" timestamp="1599736633194">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="243" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1599736633194" />
+    <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1599907771169">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1599907771169" />
     <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599816507168">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

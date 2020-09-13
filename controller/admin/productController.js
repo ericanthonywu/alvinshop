@@ -1,5 +1,6 @@
 const db = require('../../database')
 const path = require('path')
+
 /**
  * Handle Show Product
  *
@@ -22,12 +23,9 @@ exports.showProduk = (req, res) => {
         .join("genre", "genre.product_id", "product.id")
         .join("master_category", "master_category.name", "genre.category_id")
 
-    if (typeof limit == "number" || typeof limit == "string") {
-        query.limit(limit)
-    }
-
-    if (typeof offset == "number" || typeof offset == "string") {
-        query.offset(offset)
+    if (typeof offset == "number" && typeof limit == "number") {
+        query.where("product.id", ">", offset + limit)
+        query.where("product.id", ">", offset)
     }
 
     query.then(data => res.status(200).json({message: "products data", data}))
@@ -56,8 +54,8 @@ exports.showImageProductById = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.addProduct = (req, res) => {
-    const {title, description, price, stock, youtube_link, discount} = req.body
-    if (!title || !description || !price || !stock || !youtube_link || !discount) {
+    const {title, description, price, stock, youtube_link, discount, genre, device} = req.body
+    if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device) {
         return res.status(400).json({message: "Invalid parameters"})
     }
 
@@ -81,15 +79,24 @@ exports.addProduct = (req, res) => {
                     image_name: value,
                     product_id: id
                 }))
-            ).then(trx.commit)
-                .catch(trx.rollback)
+            ).then(() => {
+                trx("master_genre")
+                    .insert(genre.map(category_id => ({category_id, product_id: id})))
+                    .then(() => {
+                        trx("device_category")
+                            .insert(device.map(device_id => ({device_id, product_id: id})))
+                            .then(trx.commit)
+                            .catch(trx.rollback)
+                    })
+                    .catch(trx.rollback)
+            }).catch(trx.rollback)
         }).catch(trx.rollback)
     }).then(() => res.status(201).json({message: "product added"}))
         .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
 }
 
 /**
- * Handle edit product
+ * Handle delete product in database and delete image product
  *
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
@@ -130,4 +137,36 @@ exports.editImageProduct = (req, res) => {
         res.status(200).json({message: "Image Product Edited"})
         fs.unlinkSync(path.join(__dirname, "../../uploads/" + data.image_name))
     }).catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
+}
+
+/**
+ * Handle edit image product
+ *
+ * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
+ * @param {Response<P, ResBody, ReqQuery>} res
+ */
+exports.deleteProduct = (req, res) => {
+    const {productId: id} = req.body
+    db.transaction(trx => {
+        trx("product_image")
+            .where({product_id: id})
+            .select("image_name")
+            .then(data => {
+                if (!data.length) {
+                    trx.rollback({message: "Data not found"})
+                }
+                trx("product")
+                    .where({id})
+                    .del()
+                    .then(() => {
+                        trx("product_image")
+                            .where({product_id: id})
+                            .del()
+                            .then(trx.commit)
+                            .catch(err => trx.rollback({message: "Failed to run query", error: err}))
+                    }).catch(err => trx.rollback({message: "Failed to run query", error: err}))
+                data.forEach(({image_name}) => fs.unlinkSync(path.join(__dirname, "../../uploads/product/" + image_name)))
+            }).catch(err => trx.rollback({message: "Failed to run query", error: err}))
+    }).then(() => res.status(202).json({message: "Product Deleted"}))
+        .catch(err => res.status(500).json(err))
 }
