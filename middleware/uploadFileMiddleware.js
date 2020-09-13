@@ -1,6 +1,9 @@
 const multer = require('multer')
 const path = require('path')
 
+/**
+ * @param {string} prefix
+ */
 module.exports = (prefix) => multer({
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
