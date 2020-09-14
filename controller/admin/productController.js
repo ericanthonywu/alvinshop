@@ -40,11 +40,14 @@ exports.showProduk = (req, res) => {
  */
 exports.showImageProductById = (req, res) => {
     const {product_id} = req.body;
+    if (!product_id){
+        return res.status(400).json({message: "Product id needed"})
+    }
     db("product_image")
-        .select("image_url")
+        .select("image_name")
         .where({product_id})
         .then(data => res.status(data.length ? 200 : 404).json({message: "products image data", data, prefix: "uploads/product"}))
-        .catch(err => res.status(500).json({message: "Error when perform Query", error: err}))
+        // .catch(err => res.status(500).json({message: "Error when perform Query", error: err}))
 }
 
 /**
