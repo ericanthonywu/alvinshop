@@ -43,7 +43,7 @@ exports.showImageProductById = (req, res) => {
     db("product_image")
         .select("image_url")
         .where({product_id})
-        .then(data => res.status(200).json({message: "products image data", data, prefix: "uploads/product"}))
+        .then(data => res.status(data.length ? 200 : 404).json({message: "products image data", data, prefix: "uploads/product"}))
         .catch(err => res.status(500).json({message: "Error when perform Query", error: err}))
 }
 
