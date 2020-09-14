@@ -116,15 +116,8 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
-.idea/$CACHE_FILE$
-.idea/.gitignore
-.idea/compiler.xml
-.idea/jsLibraryMappings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/runConfigurations/
+.idea
 alvinshop.iml
-.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047/storage_v2/_src_/schema/niosoapp.sQAiGQ.meta
 uploads/banner/*
 uploads/produk/*
 uploads/our_partner/*

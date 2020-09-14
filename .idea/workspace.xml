@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="our partner crud">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/bannerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/bannerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/categoryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/deviceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/deviceController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/ourPartnerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/ourPartnerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/settingsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/settingsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
-    </list>
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update env default" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +117,7 @@
       <workItem from="1599984621568" duration="593000" />
       <workItem from="1600014724898" duration="15124000" />
       <workItem from="1600062866829" duration="1627000" />
-      <workItem from="1600084975437" duration="5034000" />
+      <workItem from="1600084975437" duration="5340000" />
     </task>
     <task id="LOCAL-00001" summary="add some crud">
       <created>1600029603501</created>
@@ -181,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600034633930</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update api postman and fix bug">
+      <created>1600090485065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600090485065</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update env default">
+      <created>1600090651215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600090651215</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +208,9 @@
     <MESSAGE value="jsdoc upload file handler" />
     <MESSAGE value="settings route" />
     <MESSAGE value="our partner crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="our partner crud" />
+    <MESSAGE value="update api postman and fix bug" />
+    <MESSAGE value="update env default" />
+    <option name="LAST_COMMIT_MESSAGE" value="update env default" />
   </component>
   <component name="WindowStateProjectService">
     <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600062320780">
@@ -236,10 +239,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600089774081" />
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600034634628">
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600090652116">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600034634628" />
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600090652116" />
     <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1599907771169">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
