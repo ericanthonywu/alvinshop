@@ -8,7 +8,7 @@ const db = require("../../database")
  */
 exports.showDevice = (req, res) => {
     db("master_device")
-        .then(data => res.status(200).json({data}))
+        .then(data => res.status(200).json({message: "Device data", data}))
         .catch(err => res.status(500).json({message: "Error Execute query", error: err}))
 }
 
@@ -32,7 +32,7 @@ exports.addDevice = (req, res) => {
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
-exports.editDevice = (req,res) => {
+exports.editDevice = (req, res) => {
     const {name, id} = req.body
     db("master_device")
         .update({name})
@@ -47,7 +47,7 @@ exports.editDevice = (req,res) => {
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
-exports.deleteDevice = (req,res) => {
+exports.deleteDevice = (req, res) => {
     const {id} = req.body
     db("master_device").where({id}).del()
         .then(() => res.status(202).json({message: "Device deleted"}))

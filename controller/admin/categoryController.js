@@ -41,7 +41,7 @@ exports.editCategory = (req, res) => {
     if (!name || !id) {
         return res.status(400).json({message: "Invalid parameters"})
     }
-    db("product")
+    db("master_category")
         .update({name})
         .where({id})
         .then(() => res.status(202).json({message: "Category edited"}))

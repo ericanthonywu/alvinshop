@@ -1,4 +1,7 @@
 const db = require('../../database')
+const moment = require('moment')
+const fs = require('fs')
+const path = require('path')
 
 /**
  * Handle Get Settings
@@ -20,18 +23,39 @@ exports.getSettings = (req, res) => {
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
-exports.updateSettings = (req,res) => {
+exports.updateSettings = (req, res) => {
     const {name, address, phone_numbers, whatsapp_url} = req.body
-    db("settings")
-        .where({id: 1})
-        .update({
-            name,
-            address,
-            phone_numbers,
-            icon_shop: req.file.filename,
-            whatsapp_url
-        })
-        .then(() => res.status(200).json({message: "Settings updated"}))
+    if (!name || !address || !phone_numbers || !whatsapp_url) {
+        return res.status(400).json({message: "Invalid request"})
+    }
+    const updateData = {
+        name,
+        address,
+        phone_numbers,
+        whatsapp_url,
+        updated_at: moment().format("YYYY-MM-DD").toString()
+    }
+    db.transaction(trx => {
+        if (req.file) {
+            updateData.icon_shop = req.file.filename
+            trx("settings")
+                .where({id: 1})
+                .first("icon_shop")
+                .then(({icon_shop}) => {
+                    try {
+                        fs.unlinkSync(path.join(__dirname, "../../uploads/logo_icon/" + icon_shop))
+                    } catch (e) {
+                        console.log(e)
+                    }
+                }).catch(trx.rollback)
+        }
+        trx("settings")
+            .where({id: 1})
+            .update(updateData)
+            .then(trx.commit)
+            .catch(trx.rollback)
+
+    }).then(() => res.status(200).json({message: "Settings updated"}))
         .catch(err => res.status(500).json({message: "Error execute query", error: err}))
 }
 
@@ -41,8 +65,20 @@ exports.updateSettings = (req,res) => {
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
-exports.migrateSettings = (req,res) => {
-    db("settings").insert({})
-        .then(() => res.status(200).json({message: "migrate successfully"}))
+exports.migrateSettings = (req, res) => {
+    db.transaction(trx => {
+        trx("settings")
+            .count("* as totalData")
+            .first()
+            .then(({totalData}) => {
+                if (totalData === 0) {
+                    trx("settings").insert({})
+                        .then(trx.commit)
+                        .catch(trx.rollback)
+                } else {
+                    trx.commit()
+                }
+            }).catch(trx.rollback)
+    }).then(() => res.status(200).json({message: "migrate successfully"}))
         .catch(err => res.status(500).json({message: "Error execute query", error: err}))
 }

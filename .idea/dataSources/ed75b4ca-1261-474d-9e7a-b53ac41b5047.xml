@@ -1425,72 +1425,76 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="409" parent="299" name="PRIMARY">
+    <column id="409" parent="299" name="updated_at">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <key id="410" parent="299" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="410" parent="300" name="id">
+    <column id="411" parent="300" name="id">
       <Position>1</Position>
       <DataType>bigint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="411" parent="300" name="email">
+    <column id="412" parent="300" name="email">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <column id="412" parent="300" name="password">
+    <column id="413" parent="300" name="password">
       <Position>3</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="413" parent="300" name="username">
+    <column id="414" parent="300" name="username">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="414" parent="300" name="registered_at">
+    <column id="415" parent="300" name="registered_at">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <key id="415" parent="300" name="PRIMARY">
+    <key id="416" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="416" parent="301" name="id">
+    <column id="417" parent="301" name="id">
       <Position>1</Position>
       <DataType>bigint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="417" parent="301" name="product_id">
+    <column id="418" parent="301" name="product_id">
       <Position>2</Position>
       <DataType>bigint unsigned|0s</DataType>
     </column>
-    <column id="418" parent="301" name="user_id">
+    <column id="419" parent="301" name="user_id">
       <Position>3</Position>
       <DataType>bigint unsigned|0s</DataType>
     </column>
-    <index id="419" parent="301" name="product_user_favourites___fk">
+    <index id="420" parent="301" name="product_user_favourites___fk">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="420" parent="301" name="user_user_favourites___fk">
+    <index id="421" parent="301" name="user_user_favourites___fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="421" parent="301" name="PRIMARY">
+    <key id="422" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="422" parent="301" name="product_user_favourites___fk">
+    <foreign-key id="423" parent="301" name="product_user_favourites___fk">
       <ColNames>product_id</ColNames>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="423" parent="301" name="user_user_favourites___fk">
+    <foreign-key id="424" parent="301" name="user_user_favourites___fk">
       <ColNames>user_id</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>

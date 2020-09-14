@@ -40,7 +40,7 @@ exports.showDetailOrder = (req, res) => {
         )
         .where({order_id})
         .join("product", "order_detail.product_id", "product.id")
-        .then(data => res.status(200).json({message: "Detail order data", data}))
+        .then(data => res.status(data.length ? 200 : 404).json({message: "Detail order data", data}))
         .catch(err => res.status(500).json({message: "Error running query", error: err}))
 }
 

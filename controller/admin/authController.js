@@ -10,7 +10,7 @@ const db = require('../../database')
  */
 exports.login = (req, res) => {
     const {username, password} = req.body
-    db("user")
+    db("admin")
         .first("password", "id")
         .where({username})
         .then(data => {
@@ -44,10 +44,10 @@ exports.login = (req, res) => {
 exports.register = (req, res) => {
     const {username, password} = req.body;
     bcrypt.hash(password, 10).then(hashedPassword => {
-        db('user').insert({
+        db('admin').insert({
             username,
             password: hashedPassword,
-        }).then(() => res.status(201).json({message: "user registered"}))
+        }).then(() => res.status(201).json({message: "admin registered"}))
             .catch(err => res.status(500).json({message: "failed to run query", error: err}));
     }).catch(err => res.status(500).json({message: "failed to run encrypt password", error: err}))
 }

@@ -19,8 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="settings route">
-      <change afterPath="$PROJECT_DIR$/controller/admin/ourPartnerController.js" afterDir="false" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="our partner crud">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/bannerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/bannerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/categoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/deviceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/deviceController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/ourPartnerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/ourPartnerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/settingsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/settingsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +69,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.58" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/controller/admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -67,6 +79,10 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -86,6 +102,9 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="RUN SERVER" type="NodeJSConfigurationType" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +128,9 @@
       <workItem from="1599907807164" duration="161000" />
       <workItem from="1599908016634" duration="505000" />
       <workItem from="1599984621568" duration="593000" />
-      <workItem from="1600014724898" duration="13588000" />
+      <workItem from="1600014724898" duration="15124000" />
+      <workItem from="1600062866829" duration="1627000" />
+      <workItem from="1600084975437" duration="5034000" />
     </task>
     <task id="LOCAL-00001" summary="add some crud">
       <created>1600029603501</created>
@@ -146,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600033950769</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="our partner crud">
+      <created>1600034580778</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600034580779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="our partner crud">
+      <created>1600034633930</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600034633930</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,13 +206,19 @@
     <MESSAGE value="edit auth banner product image" />
     <MESSAGE value="jsdoc upload file handler" />
     <MESSAGE value="settings route" />
-    <option name="LAST_COMMIT_MESSAGE" value="settings route" />
+    <MESSAGE value="our partner crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="our partner crud" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599736648433">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600062320780">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1600062320780" />
     <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599736648433" />
+    <state x="502" y="149" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1600062319152">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="502" y="149" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1600062319152" />
     <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598550093837">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -191,25 +232,35 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="243" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1599736633194" />
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600033952007">
+    <state x="208" y="31" key="SettingsEditor" timestamp="1600089774081">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600033952007" />
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600089774081" />
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600034634628">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600034634628" />
     <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1599907771169">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1599907771169" />
+    <state x="621" y="344" width="339" height="211" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1600080608193">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="621" y="344" width="339" height="211" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1440.900@0.0.1440.900" timestamp="1600080608193" />
     <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599816507168">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816507168" />
-    <state x="0" y="23" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1599816514992">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="0" y="20" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600090186268">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="0" y="20" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1600090186268" />
     <state x="0" y="23" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816514992" />
-    <state x="439" y="128" key="new project wizard" timestamp="1599681123297">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="376" y="23" width="802" height="821" key="new project wizard" timestamp="1600058245758">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="376" y="23" width="802" height="821" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1600058245758" />
     <state x="439" y="128" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1599681123297" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1599555920740">
       <screen x="0" y="0" width="1680" height="1050" />

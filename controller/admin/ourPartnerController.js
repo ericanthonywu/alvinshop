@@ -22,6 +22,13 @@ exports.showOurPartner = (req, res) => {
  */
 exports.addOurPartner = (req, res) => {
     const {partner_code, partner_name, url} = req.body
+    if (!partner_code || !partner_name || !url) {
+        return res.status(400).json({message: "Bad request"})
+    }
+
+    if (!req.file) {
+        return res.status(400).json({message: "File:logo required"})
+    }
     db("our_partner").insert({
         partner_code,
         partner_name,
@@ -39,6 +46,9 @@ exports.addOurPartner = (req, res) => {
  */
 exports.editOurPartner = (req, res) => {
     const {id, partner_code, partner_name, url} = req.body
+    if (!partner_code || !partner_name || !url || !id) {
+        return res.status(400).json({message: "Bad request"})
+    }
     const updatedData = {
         partner_code,
         partner_name,
@@ -54,9 +64,15 @@ exports.editOurPartner = (req, res) => {
                 }
                 if (req.file) {
                     updatedData.logo = req.file.filename
-                    fs.unlinkSync(path.join(__dirname, "../../uploads/our_partner/" + data.logo))
+                    try {
+                        fs.unlinkSync(path.join(__dirname, "../../uploads/our_partner/" + data.logo))
+                    } catch (e) {
+                        console.log(e)
+                    }
                 }
-                trx("our_partner").update(updatedData).where({id})
+                trx("our_partner")
+                    .update(updatedData)
+                    .where({id})
                     .then(trx.commit)
                     .catch(trx.rollback)
             }).catch(trx.rollback)
@@ -81,13 +97,13 @@ exports.deleteOurPartner = (req, res) => {
                 if (!data) {
                     return trx.rollback({message: "Data Not found"})
                 }
-                if (req.file) {
+                if (data.logo) {
                     fs.unlinkSync(path.join(__dirname, "../../uploads/our_partner/" + data.logo))
                 }
                 trx("our_partner").del().where({id})
                     .then(trx.commit)
                     .catch(trx.rollback)
             }).catch(trx.rollback)
-    }).then(() => res.status(201).json({message: "Success edit partner data"}))
+    }).then(() => res.status(201).json({message: "Success delete partner data"}))
         .catch(err => res.status(500).json({message: "Error execute query", error: err}))
 }

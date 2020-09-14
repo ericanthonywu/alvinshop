@@ -41,9 +41,9 @@ router.put("/editBanner", fileHandler("banner").single("image"), authMiddleware,
 router.put("/updateOrderBanner", authMiddleware, updateOrderBanner)
 router.post("/deleteBanner", authMiddleware, deleteBanner)
 
-router.put("/updateSettings", updateSettings)
-router.get("/getSettings", getSettings)
-router.get("/migrateSettings", migrateSettings)
+router.put("/updateSettings", fileHandler("logo_icon").single("logo"), authMiddleware, updateSettings)
+router.get("/getSettings", authMiddleware, getSettings)
+router.get("/migrateSettings", authMiddleware, migrateSettings)
 
 router.get("/showOurPartner", authMiddleware, showOurPartner)
 router.post("/addOurPartner", fileHandler("our_partner").single("image"), authMiddleware, addOurPartner)
