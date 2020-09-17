@@ -19,8 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="show product img by id status code">
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="validate show product img by id status code">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/admin/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/settingsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/settingsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -109,7 +116,9 @@
       <workItem from="1600014724898" duration="15124000" />
       <workItem from="1600062866829" duration="1627000" />
       <workItem from="1600084975437" duration="8455000" />
-      <workItem from="1600099423993" duration="364000" />
+      <workItem from="1600099423993" duration="5545000" />
+      <workItem from="1600193690437" duration="71000" />
+      <workItem from="1600193797863" duration="16168000" />
     </task>
     <task id="LOCAL-00001" summary="add some crud">
       <created>1600029603501</created>
@@ -195,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600099641492</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="validate show product img by id status code">
+      <created>1600100021116</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600100021116</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +241,8 @@
     <MESSAGE value="update env default" />
     <MESSAGE value="change produk route method" />
     <MESSAGE value="show product img by id status code" />
-    <option name="LAST_COMMIT_MESSAGE" value="show product img by id status code" />
+    <MESSAGE value="validate show product img by id status code" />
+    <option name="LAST_COMMIT_MESSAGE" value="validate show product img by id status code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600090965817">
@@ -237,28 +254,45 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="502" y="149" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1600062319152" />
-    <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1598550093837">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="453" y="230" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600193738536">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="453" y="230" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1600193738536" />
     <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598550093837" />
     <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1600091055396">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1440.900@0.0.1440.900" timestamp="1600091055396" />
     <state x="528" y="287" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1680.1050@0.0.1680.1050" timestamp="1599736593500" />
+    <state width="958" height="240" key="GridCell.Tab.0.bottom" timestamp="1600253615521">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600253615521" />
+    <state width="958" height="240" key="GridCell.Tab.0.center" timestamp="1600253615520">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600253615520" />
+    <state width="958" height="240" key="GridCell.Tab.0.left" timestamp="1600253615519">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600253615519" />
+    <state width="958" height="240" key="GridCell.Tab.0.right" timestamp="1600253615521">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="958" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600253615521" />
     <state width="243" height="462" key="HiddenNamespacesPopup" timestamp="1600090960323">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="243" height="462" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600090960323" />
     <state width="243" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1599736633194" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1600089774081">
+    <state x="208" y="31" key="SettingsEditor" timestamp="1600198309807">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600089774081" />
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600099642713">
+    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600198309807" />
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600100021790">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600099642713" />
+    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600100021790" />
     <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600091009211">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -271,10 +305,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816507168" />
-    <state x="0" y="20" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600090186268">
+    <state x="0" y="23" width="1440" height="821" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600335374258">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="0" y="20" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1600090186268" />
+    <state x="0" y="23" width="1440" height="821" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1600335374258" />
     <state x="0" y="23" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816514992" />
     <state x="376" y="23" width="802" height="821" key="new project wizard" timestamp="1600058245758">
       <screen x="0" y="0" width="1440" height="900" />

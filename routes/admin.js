@@ -3,7 +3,7 @@ const router = express.Router();
 const {login, register} = require("../controller/admin/authController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {showCategory, addCategory, deleteCategory, editCategory} = require("../controller/admin/categoryController");
-const {showProduk, addProduct, deleteProduct, editImageProduct, editProduct, showImageProductById} = require("../controller/admin/productController");
+const {showProduk, showProdukById, showDetailProduct, addProduct, deleteProduct, addImageProduct, editImageProduct, deleteImageProduct, editProduct, showImageProductById, deleteDeviceProduct, addDeviceProduct, addGenreProduct, deleteGenreProduct} = require("../controller/admin/productController");
 const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/orderController");
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
 const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
@@ -20,11 +20,22 @@ router.put("/editCategory", authMiddleware, editCategory)
 router.post("/deleteCategory", authMiddleware, deleteCategory)
 
 router.post("/showProduk", authMiddleware, showProduk)
-router.post("/showImageProductById", authMiddleware, showImageProductById)
+router.post("/showProdukById", authMiddleware, showProdukById)
+router.post("/showDetailProduct", authMiddleware, showDetailProduct)
 router.post("/addProduct", fileHandler("produk").array("image"), authMiddleware, addProduct)
 router.put("/editProduct", authMiddleware, editProduct)
-router.put("/editImageProduct", fileHandler("produk").single("image"), authMiddleware, editImageProduct)
 router.post("/deleteProduct", authMiddleware, deleteProduct)
+
+router.post("/showImageProductById", authMiddleware, showImageProductById)
+router.post("/addImageProduct", fileHandler("produk").single("image"), authMiddleware, addImageProduct)
+router.put("/editImageProduct", fileHandler("produk").single("image"), authMiddleware, editImageProduct)
+router.post("/deleteImageProduct", authMiddleware, deleteImageProduct)
+
+router.post("/addGenre", authMiddleware, addGenreProduct)
+router.post("/deleteGenre", authMiddleware, deleteGenreProduct)
+
+router.post("/addDeviceProduct", authMiddleware, addDeviceProduct)
+router.post("/deleteDeviceProduct", authMiddleware, deleteDeviceProduct)
 
 router.get("/showOrder", authMiddleware, showOrder)
 router.post("/showDetailOrder", authMiddleware, showDetailOrder)

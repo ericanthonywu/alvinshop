@@ -118,7 +118,8 @@ dist
 
 .idea
 alvinshop.iml
-uploads/banner/*
-uploads/produk/*
-uploads/our_partner/*
-uploads/logo_icon/*
+uploads/banner/
+uploads/produk/
+uploads/our_partner/
+uploads/logo_icon/
+/.idea/

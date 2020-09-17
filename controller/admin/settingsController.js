@@ -24,8 +24,8 @@ exports.getSettings = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.updateSettings = (req, res) => {
-    const {name, address, phone_numbers, whatsapp_url} = req.body
-    if (!name || !address || !phone_numbers || !whatsapp_url) {
+    const {name, address, phone_numbers, whatsapp_url, bukalapak, shopee, tokopedia} = req.body
+    if (!name || !address || !phone_numbers || !whatsapp_url || !bukalapak || !shopee || !tokopedia) {
         return res.status(400).json({message: "Invalid request"})
     }
     const updateData = {
@@ -33,6 +33,9 @@ exports.updateSettings = (req, res) => {
         address,
         phone_numbers,
         whatsapp_url,
+        bukalapak,
+        shopee,
+        tokopedia,
         updated_at: moment().format("YYYY-MM-DD").toString()
     }
     db.transaction(trx => {
