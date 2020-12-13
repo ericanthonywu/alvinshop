@@ -19,15 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="validate show product img by id status code">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update git ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/settingsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/settingsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,6 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go1.14.1.darwin-amd64" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -59,15 +55,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.12.58" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,22 +66,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/controller/admin" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="RUN SERVER" type="NodeJSConfigurationType" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,110 +89,32 @@
       <workItem from="1598881048695" duration="1440000" />
       <workItem from="1599182244695" duration="4437000" />
       <workItem from="1599546118388" duration="20029000" />
-      <workItem from="1599906250209" duration="437000" />
-      <workItem from="1599907722416" duration="78000" />
-      <workItem from="1599907807164" duration="161000" />
-      <workItem from="1599908016634" duration="505000" />
-      <workItem from="1599984621568" duration="593000" />
-      <workItem from="1600014724898" duration="15124000" />
-      <workItem from="1600062866829" duration="1627000" />
-      <workItem from="1600084975437" duration="8455000" />
-      <workItem from="1600099423993" duration="5545000" />
-      <workItem from="1600193690437" duration="71000" />
-      <workItem from="1600193797863" duration="16168000" />
+      <workItem from="1599906250209" duration="1303000" />
+      <workItem from="1607489385011" duration="3989000" />
+      <workItem from="1607786219537" duration="1079000" />
     </task>
-    <task id="LOCAL-00001" summary="add some crud">
-      <created>1600029603501</created>
+    <task id="LOCAL-00001" summary="update">
+      <created>1599907132075</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1600029603501</updated>
+      <updated>1599907132075</updated>
     </task>
-    <task id="LOCAL-00002" summary="edit auth banner product image">
-      <created>1600033510945</created>
+    <task id="LOCAL-00002" summary="update DB and file handler logic">
+      <created>1607492686449</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1600033510945</updated>
+      <updated>1607492686449</updated>
     </task>
-    <task id="LOCAL-00003" summary="jsdoc upload file handler">
-      <created>1600033542501</created>
+    <task id="LOCAL-00003" summary="update git ignore">
+      <created>1607495008481</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1600033542501</updated>
+      <updated>1607495008481</updated>
     </task>
-    <task id="LOCAL-00004" summary="jsdoc upload file handler">
-      <created>1600033915630</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1600033915630</updated>
-    </task>
-    <task id="LOCAL-00005" summary="settings route">
-      <created>1600033950769</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1600033950769</updated>
-    </task>
-    <task id="LOCAL-00006" summary="our partner crud">
-      <created>1600034580778</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1600034580779</updated>
-    </task>
-    <task id="LOCAL-00007" summary="our partner crud">
-      <created>1600034633930</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1600034633930</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update api postman and fix bug">
-      <created>1600090485065</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1600090485065</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update env default">
-      <created>1600090651215</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1600090651215</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update env default">
-      <created>1600091072308</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1600091072308</updated>
-    </task>
-    <task id="LOCAL-00011" summary="change produk route method">
-      <created>1600099581021</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1600099581021</updated>
-    </task>
-    <task id="LOCAL-00012" summary="show product img by id status code">
-      <created>1600099641492</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1600099641492</updated>
-    </task>
-    <task id="LOCAL-00013" summary="validate show product img by id status code">
-      <created>1600100021116</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1600100021116</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,92 +135,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add some crud" />
-    <MESSAGE value="edit auth banner product image" />
-    <MESSAGE value="jsdoc upload file handler" />
-    <MESSAGE value="settings route" />
-    <MESSAGE value="our partner crud" />
-    <MESSAGE value="update api postman and fix bug" />
-    <MESSAGE value="update env default" />
-    <MESSAGE value="change produk route method" />
-    <MESSAGE value="show product img by id status code" />
-    <MESSAGE value="validate show product img by id status code" />
-    <option name="LAST_COMMIT_MESSAGE" value="validate show product img by id status code" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600090965817">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="179" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1600090965817" />
-    <state x="440" y="190" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599736648433" />
-    <state x="502" y="149" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1600062319152">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="502" y="149" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1600062319152" />
-    <state x="453" y="230" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600193738536">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="453" y="230" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1600193738536" />
-    <state x="528" y="268" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1598550093837" />
-    <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1600091055396">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="453" y="246" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1440.900@0.0.1440.900" timestamp="1600091055396" />
-    <state x="528" y="287" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1680.1050@0.0.1680.1050" timestamp="1599736593500" />
-    <state width="958" height="240" key="GridCell.Tab.0.bottom" timestamp="1600253615521">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="958" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600253615521" />
-    <state width="958" height="240" key="GridCell.Tab.0.center" timestamp="1600253615520">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="958" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600253615520" />
-    <state width="958" height="240" key="GridCell.Tab.0.left" timestamp="1600253615519">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="958" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600253615519" />
-    <state width="958" height="240" key="GridCell.Tab.0.right" timestamp="1600253615521">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="958" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600253615521" />
-    <state width="243" height="462" key="HiddenNamespacesPopup" timestamp="1600090960323">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="243" height="462" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1600090960323" />
-    <state width="243" height="539" key="HiddenNamespacesPopup/0.0.1680.1050@0.0.1680.1050" timestamp="1599736633194" />
-    <state x="208" y="31" key="SettingsEditor" timestamp="1600198309807">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600198309807" />
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600100021790">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="320" y="186" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1600100021790" />
-    <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1600091009211">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="596" y="29" width="341" height="841" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1440.900@0.0.1440.900" timestamp="1600091009211" />
-    <state x="621" y="344" width="339" height="211" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1600080608193">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="621" y="344" width="339" height="211" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog/0.0.1440.900@0.0.1440.900" timestamp="1600080608193" />
-    <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599816507168">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="605" y="345" width="470" height="357" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816507168" />
-    <state x="0" y="23" width="1440" height="821" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1600335374258">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="0" y="23" width="1440" height="821" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1600335374258" />
-    <state x="0" y="23" width="1680" height="972" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1599816514992" />
-    <state x="376" y="23" width="802" height="821" key="new project wizard" timestamp="1600058245758">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="376" y="23" width="802" height="821" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1600058245758" />
-    <state x="439" y="128" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1599681123297" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1599555920740">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1599555920740" />
+    <MESSAGE value="update" />
+    <MESSAGE value="update DB and file handler logic" />
+    <MESSAGE value="update git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update git ignore" />
   </component>
 </project>
