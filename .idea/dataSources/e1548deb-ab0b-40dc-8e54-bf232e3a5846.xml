@@ -1116,6 +1116,8 @@ SELECT|sys.sys_config
       <ColNames>category_id</ColNames>
       <RefTableName>master_category</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnUpdate>set-null</OnUpdate>
+      <OnDelete>set-null</OnDelete>
     </foreign-key>
     <foreign-key id="341" parent="289" name="product_genre___fk">
       <ColNames>product_id</ColNames>
