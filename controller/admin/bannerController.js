@@ -36,27 +36,22 @@ exports.addBanner = (req, res) => {
     if (!req.file) {
         return res.status(400).json({message: "File needed"})
     }
-    db.transaction(async trx => {
-        try {
-            await trx("banner")
-                .max("sequence as sequence")
-                .first()
-                .orderBy("id", "desc")
-                .limit(1)
-                .then(async last_sequence => {
-                    await trx("banner").insert({
-                        banner_name,
-                        url,
-                        image: req.file.filename,
-                        sequence: last_sequence ? last_sequence.sequence + 1 : 1
-                    })
-                        .then(trx.commit)
-                        .catch(trx.rollback)
-                }).catch(trx.rollback)
-        }
-        catch (e){
-            return trx.rollback(e)
-        }
+    db.transaction(trx => {
+        trx("banner")
+            .max("sequence as sequence")
+            .first()
+            .orderBy("id", "desc")
+            .limit(1)
+            .then( last_sequence => {
+                trx("banner").insert({
+                    banner_name,
+                    url,
+                    image: req.file.filename,
+                    sequence: last_sequence ? last_sequence.sequence + 1 : 1
+                })
+                    .then(trx.commit)
+                    .catch(trx.rollback)
+            }).catch(trx.rollback)
     }).then(() => res.status(200).json({message: "Banner added"}))
         .catch(err => res.status(500).json({message: "Error execute query", error: err}))
 }

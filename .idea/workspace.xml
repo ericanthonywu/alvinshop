@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update git ignore">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ed75b4ca-1261-474d-9e7a-b53ac41b5047.xml" afterDir="false" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update env default">
+      <change beforePath="$PROJECT_DIR$/.env.default" beforeDir="false" afterPath="$PROJECT_DIR$/.env.default" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/uploadFileMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/uploadFileMiddleware.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,9 @@
       <workItem from="1599546118388" duration="20029000" />
       <workItem from="1599906250209" duration="1303000" />
       <workItem from="1607489385011" duration="3989000" />
-      <workItem from="1607786219537" duration="1079000" />
+      <workItem from="1607786219537" duration="2787000" />
+      <workItem from="1608013918687" duration="530000" />
+      <workItem from="1608071744726" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607495008481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update env default">
+      <created>1607837043806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607837043806</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +145,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="update DB and file handler logic" />
     <MESSAGE value="update git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update git ignore" />
+    <MESSAGE value="update env default" />
+    <option name="LAST_COMMIT_MESSAGE" value="update env default" />
   </component>
 </project>

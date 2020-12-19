@@ -1,5 +1,6 @@
 const multer = require('multer')
 const path = require('path')
+const fs = require('fs')
 
 /**
  * Handle file upload
@@ -13,7 +14,7 @@ module.exports = (prefix) => multer({
             try {
                 fs.mkdirSync(path.join(__dirname, `../uploads`), {recursive: true})
                 fs.mkdirSync(path.join(__dirname, `../uploads/${req.dest}`), {recursive: true})
-            }catch (e){
+            } catch (e) {
                 console.log(e)
             }
             cb(null, path.join(__dirname, `../uploads/${req.dest}`))
