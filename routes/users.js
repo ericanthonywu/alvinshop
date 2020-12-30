@@ -1,5 +1,5 @@
 const express = require('express');
-const {bannerUser} = require("../controller/user/homeController");
+const {bannerUser, ourPartner} = require("../controller/user/homeController");
 
 const {detailProduct} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
@@ -13,5 +13,6 @@ router.post("/verifyEmail", verifyEmail);
 router.post("/detailProduct", detailProduct)
 
 router.get("/banner", bannerUser)
+router.get("/ourPartner", ourPartner)
 
 module.exports = router;
