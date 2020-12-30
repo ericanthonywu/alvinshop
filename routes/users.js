@@ -1,5 +1,6 @@
 const express = require('express');
-const {showBanner} = require("../controller/admin/bannerController");
+const {bannerUser} = require("../controller/user/homeController");
+
 const {detailProduct} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {login, register, verifyEmail} = require("../controller/user/authController");
@@ -11,6 +12,6 @@ router.post("/verifyEmail", verifyEmail);
 
 router.post("/detailProduct", detailProduct)
 
-router.get("/banner", showBanner)
+router.get("/banner", bannerUser)
 
 module.exports = router;
