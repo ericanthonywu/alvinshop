@@ -85,6 +85,6 @@ exports.verifyEmail = (req, res, next) => {
         .count("username")
         .first()
         .where({token})
-        .then(data => console.log(data))
+        .then(data => res.status(200).json({data}))
         .catch(err => res.status(500).json({message: "failed to run query", error: err}));
 }

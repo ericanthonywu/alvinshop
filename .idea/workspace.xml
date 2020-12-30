@@ -19,17 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="add static uploads">
-      <change afterPath="$PROJECT_DIR$/globalHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.default" beforeDir="false" afterPath="$PROJECT_DIR$/.env.default" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-    </list>
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +112,7 @@
       <workItem from="1608071744726" duration="3076000" />
       <workItem from="1608908553455" duration="590000" />
       <workItem from="1608971348709" duration="488000" />
-      <workItem from="1609341047443" duration="4265000" />
+      <workItem from="1609341047443" duration="4953000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -166,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608387958438</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1609345817728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609345817728</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,8 +187,8 @@
     <MESSAGE value="update DB and file handler logic" />
     <MESSAGE value="update git ignore" />
     <MESSAGE value="update env default" />
-    <MESSAGE value="update" />
     <MESSAGE value="add static uploads" />
-    <option name="LAST_COMMIT_MESSAGE" value="add static uploads" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
