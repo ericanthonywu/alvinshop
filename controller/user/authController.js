@@ -52,24 +52,25 @@ exports.login = (req, res) => {
 exports.register = (req, res) => {
     const {username, password, email} = req.body;
     bcrypt.hash(password, 10).then(hashedPassword => {
-        const token = Math.floor(Math.random() * 10000000000).toString() +
-            cryptoRandomString({length: 200, type: 'url-safe'});
-        sendEmail.sendMail({
-            from: "alvinshop",
-            to: email,
-            subject: "Token Verification",
-            html: `Hello ${username}! <br><br>
-                    Thank you for registering, click link below to verify your email: 
-                    <br><br><p style="font-size:24px;"><b><a href="http://156.67.220.185/verify/${token}"></a></b></p><br>
-                        IMPORTANT! NEVER TELL YOUR TOKEN TO ANYONE!`
-        }).then(() => {
-            db('user').insert({
-                username,
-                password: hashedPassword,
-                email
-            }).then(() => res.status(201).json({message: "user registered"}))
-                .catch(err => res.status(500).json({message: "failed to run query", error: err}));
-        }).catch(err => res.status(500).json({message: "failed to send email", error: err}));
+        db('user').insert({
+            username,
+            password: hashedPassword,
+            email
+        }).then(() => res.status(201).json({message: "user registered"}))
+            .catch(err => res.status(500).json({message: "failed to run query", error: err}));
+        // const token = Math.floor(Math.random() * 10000000000).toString() +
+        //     cryptoRandomString({length: 200, type: 'url-safe'});
+        // sendEmail.sendMail({
+        //     from: "alvinshop",
+        //     to: email,
+        //     subject: "Token Verification",
+        //     html: `Hello ${username}! <br><br>
+        //             Thank you for registering, click link below to verify your email:
+        //             <br><br><p style="font-size:24px;"><b><a href="http://156.67.220.185/verify/${token}"></a></b></p><br>
+        //                 IMPORTANT! NEVER TELL YOUR TOKEN TO ANYONE!`
+        // }).then(() => {
+        //
+        // }).catch(err => res.status(500).json({message: "failed to send email", error: err}));
     })
 }
 
