@@ -5,7 +5,7 @@ exports.bannerUser = (req,res) => {
         .select(
             'banner_name',
             'url',
-            db.raw("CONCAT('uploads/banner', image) as banner_image")
+            db.raw("CONCAT('uploads/banner/', image) as banner_image")
         )
         .orderBy('sequence', 'asc')
         .then(data => res.status(200).json({message: "banner", data}))

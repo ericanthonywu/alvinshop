@@ -11,7 +11,7 @@ exports.detailProduct = (req, res) => {
                 trx("product_image")
                     .where({product_id: id})
                     .select(
-                        db.raw(`CONCAT('uploads/product', image_name) as product_image`)
+                        db.raw(`CONCAT('uploads/product/', image_name) as product_image`)
                     )
                     .then(imageData => {
                         trx("genre")
