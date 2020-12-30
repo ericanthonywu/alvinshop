@@ -57,14 +57,21 @@ exports.order = (req, res) => {
                         trx("order")
                             .insert({
                                 user_id: res.userData.id,
-                            },'id')
+                            }, 'id')
                             .then(([order_id]) => {
                                 trx("order_detail")
                                     .insert(cartData.map(data => ({...data, order_id})))
                                     .then(() => {
                                         trx("order")
                                             .where({id: order_id})
-                                            .update({order_code: `order-${Date.now()}-${res.userData.id}-${Math.round(Math.random() * 1000000)}`})
+                                            .update({
+                                                order_code: `order-${Date.now()}-${res.userData.id}-${Math.round(Math.random() * 1000000)}`,
+                                                total_price: db("order_detail")
+                                                    .where({order_id})
+                                                    .sum("product.price")
+                                                    .first()
+                                                    .join("product","product.id","order_detail.product_id")
+                                            })
                                             .then(trx.commit)
                                             .catch(trx.rollback)
                                     }).catch(trx.rollback)
