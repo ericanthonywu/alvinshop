@@ -1,4 +1,5 @@
 require('dotenv').config({path: ".env"})
+
 module.exports = require('knex')({
     client: process.env.DB_CONNECTION,
     connection: {
