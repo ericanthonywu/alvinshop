@@ -82,9 +82,9 @@ exports.register = (req, res) => {
 exports.verifyEmail = (req, res, next) => {
     const {token} = req.body
     db("user")
-        .count("username")
+        .count("username as count")
         .first()
         .where({token})
-        .then(data => res.status(200).json({data}))
+        .then(({count}) => count ? res.status(200).json({message: "user verified"}) : res.status(404).json({message: "user not found"}))
         .catch(err => res.status(500).json({message: "failed to run query", error: err}));
 }
