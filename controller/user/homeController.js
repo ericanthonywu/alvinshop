@@ -33,3 +33,30 @@ exports.ourPartner = (req,res) => {
         .then(data => res.status(200).json({message: "our partner", data}))
         .catch(err => res.status(500).json(err))
 }
+
+exports.recommendProduct = (req,res) => {
+    db("product")
+        .select(
+            "product.id as product_id",
+            "title",
+            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+        )
+        .distinct("order_detail.product_id")
+        .where('stock', '!=', 0)
+        .join("order_detail","order_detail.product_id", "product.id")
+        .orderBy("order_detail.product_id", "desc")
+        .then(data => res.status(200).json({message: "recommend product", data}))
+        .catch(err => res.status(500).json(err))
+}
+
+exports.todayOffer = (req,res) => {
+    db("product")
+        .select(
+            "product.id as product_id",
+            "title",
+            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+        )
+        .where({today_offer: true})
+        .then(data => res.status(200).json({message: "todays offer product", data}))
+        .catch(err => res.status(500).json(err))
+}
