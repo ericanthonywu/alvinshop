@@ -6,11 +6,11 @@ const nodeMailer = require('nodemailer');
  * @type {Mail}
  */
 exports.sendEmail = nodeMailer.createTransport({
-    // host: "smtp.gmail.com",
-    // port: process.env.EMAILPORT,
-    // secure: true,
     service: "Gmail",
-    // requireTLS: true,
+    host: 'smtp.gmail.com',
+    port: 587,
+    ignoreTLS: false,
+    secure: false,
     auth: {
         user: process.env.EMAIL,
         pass: process.env.EMAILPASSWORD
