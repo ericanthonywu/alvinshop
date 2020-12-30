@@ -3,7 +3,7 @@ const router = express.Router();
 const {login, register} = require("../controller/admin/authController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {showCategory, addCategory, deleteCategory, editCategory} = require("../controller/admin/categoryController");
-const {showProduk, showProdukById, showDetailProduct, addProduct, deleteProduct, addImageProduct, editImageProduct, deleteImageProduct, editProduct, showImageProductById, deleteDeviceProduct, addDeviceProduct, addGenreProduct, deleteGenreProduct} = require("../controller/admin/productController");
+const {showProduk, showProdukById, showDetailProduct, addProduct, deleteProduct, addImageProduct, editImageProduct, deleteImageProduct, editProduct, showImageProductById, deleteDeviceProduct, addDeviceProduct, addGenreProduct, deleteGenreProduct, toggleTodayOffer} = require("../controller/admin/productController");
 const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/orderController");
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
 const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
@@ -25,6 +25,8 @@ router.post("/showDetailProduct", authMiddleware, showDetailProduct)
 router.post("/addProduct", fileHandler("produk").array("image"), authMiddleware, addProduct)
 router.put("/editProduct", authMiddleware, editProduct)
 router.post("/deleteProduct", authMiddleware, deleteProduct)
+
+router.post("/toggleTodayOffer", authMiddleware, toggleTodayOffer)
 
 router.post("/showImageProductById", authMiddleware, showImageProductById)
 router.post("/addImageProduct", fileHandler("produk").single("image"), authMiddleware, addImageProduct)

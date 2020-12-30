@@ -334,6 +334,18 @@ exports.addGenreProduct = (req, res) => {
         .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
 }
 
+exports.toggleTodayOffer = (req, res) => {
+    const {product_id, offer_status} = req.body
+    if (typeof offer_status !== "boolean"){
+        return res.status(400).json({message: "offer_status must be boolean"})
+    }
+    db("product")
+        .where({id: product_id})
+        .update({today_offer: offer_status})
+        .then(() => res.status(201).json({message: "Todays offer updated"}))
+        .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
+}
+
 /**
  * Handle delete genre product
  *

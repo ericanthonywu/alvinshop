@@ -27,6 +27,7 @@ exports.searchProduct = (req,res) => {
         .then(data => res.status(200).json({message: "banner", data}))
         .catch(err => res.status(500).json(err))
 }
+
 exports.ourPartner = (req,res) => {
     db("our_partner")
         .select('*')
