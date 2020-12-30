@@ -1,5 +1,5 @@
 const express = require('express');
-const {bannerUser, ourPartner} = require("../controller/user/homeController");
+const {bannerUser, ourPartner, searchProduct} = require("../controller/user/homeController");
 
 const {detailProduct} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
@@ -14,5 +14,7 @@ router.post("/detailProduct", detailProduct)
 
 router.get("/banner", bannerUser)
 router.get("/ourPartner", ourPartner)
+
+router.get("/searchProduct", searchProduct)
 
 module.exports = router;

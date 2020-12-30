@@ -12,6 +12,21 @@ exports.bannerUser = (req,res) => {
         .catch(err => res.status(500).json(err))
 }
 
+exports.searchProduct = (req,res) => {
+    const {keyword} = req.query
+    db("product")
+        .where('title', 'like', `${keyword}%`)
+        .select(
+            "product.id as product_id",
+            "title",
+            "price",
+            "stock",
+            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+        )
+        .join("product_image","product_image.product_id","product.id")
+        .then(data => res.status(200).json({message: "banner", data}))
+        .catch(err => res.status(500).json(err))
+}
 exports.ourPartner = (req,res) => {
     db("banner")
         .select('*')
