@@ -1,4 +1,5 @@
 const express = require('express');
+const {addCart, showCart, updateQuantity, deleteCart, order} = require("../controller/user/orderController");
 const {bannerUser, ourPartner, searchProduct, recommendProduct, todayOffer} = require("../controller/user/homeController");
 
 const {detailProduct} = require("../controller/user/productController");
@@ -19,5 +20,12 @@ router.get("/searchProduct", searchProduct)
 
 router.get("/recommendProduct", recommendProduct)
 router.get("/todayOffer", todayOffer)
+
+router.post('/addCart', authMiddleware, addCart)
+router.get('/showCart', authMiddleware, showCart)
+router.put('/updateQuantity', authMiddleware, updateQuantity)
+router.delete('/deleteCart', authMiddleware, deleteCart)
+
+router.post("/order", authMiddleware, order)
 
 module.exports = router;
