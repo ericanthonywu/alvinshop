@@ -45,6 +45,7 @@ exports.recommendProduct = (req,res) => {
         .where('stock', '!=', 0)
         .join("order_detail","order_detail.product_id", "product.id")
         .orderBy("order_detail.product_id", "desc")
+        .limit(5)
         .then(data => res.status(200).json({message: "recommend product", data}))
         .catch(err => res.status(500).json(err))
 }
