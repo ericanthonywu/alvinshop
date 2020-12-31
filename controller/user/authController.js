@@ -23,9 +23,9 @@ exports.login = (req, res) => {
                 return res.status(404).json({message: 'User not found'});
             }
             const {password: passwordHashed, id} = data
-            if (!data.verify_email) {
-                return res.status(403).json({message: "Email not verified"})
-            }
+            // if (!data.verify_email) {
+            //     return res.status(403).json({message: "Email not verified"})
+            // }
             bcrypt.compare(password, passwordHashed).then(check => {
                 if (check) {
                     jwt.sign({

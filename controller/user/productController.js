@@ -28,3 +28,20 @@ exports.detailProduct = (req, res) => {
     }).then(data => res.status(200).json({message: "product data", data}))
         .catch(err => err ? res.status(404).json({message: "no such product"}) : res.status(500).json(err))
 }
+
+exports.addToFavourites = (req,res) => {
+    const {product_id} = req.body
+    db("user_favourites")
+        .insert({user_id: res.userData.id, product_id})
+        .then(() => res.status(200).json({message: "favourites added"}))
+        .catch(err => res.status(500).json(err))
+}
+
+exports.removeToFavourites = (req,res) => {
+    const {product_id} = req.body
+    db("user_favourites")
+        .where({user_id: res.userData.id, product_id})
+        .del()
+        .then(() => res.status(200).json({message: "favourites removed"}))
+        .catch(err => res.status(500).json(err))
+}
