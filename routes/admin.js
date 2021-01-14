@@ -14,7 +14,7 @@ const {updateSettings, getSettings, migrateSettings} = require("../controller/ad
 router.post('/login', login);
 router.post('/register', register);
 
-router.get("/showCategory", authMiddleware, showCategory)
+router.post("/showCategory", authMiddleware, showCategory)
 router.post("/addCategory", authMiddleware, addCategory)
 router.put("/editCategory", authMiddleware, editCategory)
 router.post("/deleteCategory", authMiddleware, deleteCategory)
