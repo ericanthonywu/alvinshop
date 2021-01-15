@@ -77,7 +77,7 @@ exports.showDetailProduct = (req, res) => {
                     .then(image => {
                         trx("category")
                             .where({product_id})
-                            .join("master_category", "genre.category_id", "master_category.id")
+                            .join("master_category", "category.category_id", "master_category.id")
                             .select("master_category.id as id", "master_category.name as category")
                             .then(category => {
                                 trx("genre")
