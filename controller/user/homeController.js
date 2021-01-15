@@ -79,3 +79,10 @@ exports.getGenre = (req,res) => {
         .then(data => res.status(200).json({message: "data genre", data}))
         .catch(err => res.status(500).json(err))
 }
+
+exports.getSettings = (req,res) => {
+    db("settings")
+        .select("*")
+        .then(data => res.status(200).json({message: "data setting", data}))
+        .catch(err => res.status(500).json(err))
+}
