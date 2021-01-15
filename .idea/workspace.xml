@@ -84,6 +84,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RUN BACKEND" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/bin/www" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -113,6 +124,7 @@
       <workItem from="1608971348709" duration="488000" />
       <workItem from="1609341047443" duration="14731000" />
       <workItem from="1609759022297" duration="92000" />
+      <workItem from="1610640542958" duration="1387000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -317,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609395101176</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <created>1610640768754</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1610640768754</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

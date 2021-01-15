@@ -64,3 +64,10 @@ exports.todayOffer = (req,res) => {
         .then(data => res.status(200).json({message: "todays offer product", data}))
         .catch(err => res.status(500).json(err))
 }
+
+exports.getCategory = (req,res) => {
+    db("master_category")
+        .select("name")
+        .then(data => res.status(200).json({message: "categories", data}))
+        .catch(err => res.status(500).json(err))
+}
