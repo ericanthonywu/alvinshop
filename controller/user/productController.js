@@ -33,7 +33,7 @@ exports.detailProduct = (req, res) => {
                                             .select("master_device.id as id", "master_device.name as device")
                                             .then(device =>
                                                 trx.commit({
-                                                    ...data
+                                                    ...data,
                                                     image: {data: imageData, prefix: "uploads/product"},
                                                     category,
                                                     device,
