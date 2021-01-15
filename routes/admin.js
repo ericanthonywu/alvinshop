@@ -3,7 +3,7 @@ const router = express.Router();
 const {login, register} = require("../controller/admin/authController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {showCategory, addCategory, deleteCategory, editCategory} = require("../controller/admin/categoryController");
-const {showProduk, showProdukById, showDetailProduct, addProduct, deleteProduct, addImageProduct, editImageProduct, deleteImageProduct, editProduct, showImageProductById, deleteDeviceProduct, addDeviceProduct, addGenreProduct, deleteGenreProduct, toggleTodayOffer} = require("../controller/admin/productController");
+const {showProduk, showProdukById, showDetailProduct, addProduct, deleteProduct, addImageProduct, editImageProduct, deleteImageProduct, editProduct, showImageProductById, deleteDeviceProduct, addDeviceProduct, addGenreProduct, deleteGenreProduct, toggleTodayOffer, addCategoryProduct, deleteCategoryProduct} = require("../controller/admin/productController");
 const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/orderController");
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
 const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
@@ -35,6 +35,11 @@ router.post("/deleteImageProduct", authMiddleware, deleteImageProduct)
 
 router.post("/addGenre", authMiddleware, addGenreProduct)
 router.post("/deleteGenre", authMiddleware, deleteGenreProduct)
+
+router.post("/addCategoryProduct", authMiddleware, addCategoryProduct)
+router.post("/deleteCategoryProduct", authMiddleware, deleteCategoryProduct)
+
+router.post("/addCategoryProduct", authMiddleware, addCategoryProduct)
 
 router.post("/addDeviceProduct", authMiddleware, addDeviceProduct)
 router.post("/deleteDeviceProduct", authMiddleware, deleteDeviceProduct)

@@ -23,8 +23,6 @@ exports.showProduk = (req, res) => {
         )
 
     if (typeof offset == "number" && typeof limit == "number") {
-        // query.where("product.id", "<=", offset + limit)
-        // query.where("product.id", ">", offset)
         query.limit(limit).offset(offset)
     }
 
@@ -77,20 +75,29 @@ exports.showDetailProduct = (req, res) => {
                     .select("id", "image_name")
                     .where({product_id})
                     .then(image => {
-                        trx("genre")
+                        trx("category")
                             .where({product_id})
                             .join("master_category", "genre.category_id", "master_category.id")
                             .select("master_category.id as id", "master_category.name as category")
                             .then(category => {
-                                trx("device_product")
+                                trx("genre")
+                                    .join("master_genre", "genre.genre_id", "master_genre.id")
+                                    .select("master_genre.id as id", "master_genre.name as genre")
                                     .where({product_id})
-                                    .join("master_device", "device_product.device_id", "master_device.id")
-                                    .select("master_device.id as id", "master_device.name as device")
-                                    .then(device => trx.commit({
-                                        image: {data: image, prefix: "uploads/product"},
-                                        category,
-                                        device
-                                    }))
+                                    .then(genre => {
+                                        trx("device_product")
+                                            .where({product_id})
+                                            .join("master_device", "device_product.device_id", "master_device.id")
+                                            .select("master_device.id as id", "master_device.name as device")
+                                            .then(device =>
+                                                trx.commit({
+                                                    image: {data: image, prefix: "uploads/product"},
+                                                    category,
+                                                    device,
+                                                    genre
+                                                })
+                                            ).catch(trx.rollback)
+                                    }).catch(trx.rollback)
                             }).catch(trx.rollback)
                     }).catch(trx.rollback)
             }).catch(trx.rollback)
@@ -129,7 +136,7 @@ exports.showImageProductById = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.addProduct = (req, res) => {
-    const {title, description, price, stock, youtube_link, discount, genre, device} = req.body
+    const {title, description, price, stock, youtube_link, discount, genre, device, category} = req.body
     if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device) {
         return res.status(400).json({message: "Invalid parameters"})
     }
@@ -157,9 +164,11 @@ exports.addProduct = (req, res) => {
                 }))
             )
             await trx("genre")
-                .insert(JSON.parse(genre).map(category_id => ({category_id, product_id: id})))
+                .insert(JSON.parse(genre).map(genre_id => ({genre_id, product_id: id})))
             await trx("device_product")
                 .insert(JSON.parse(device).map(device_id => ({device_id, product_id: id})))
+            await trx("category")
+                .insert(JSON.parse(category).map(category_id => ({category_id, product_id: id})))
             return trx.commit()
         } catch (e) {
             return trx.rollback(e)
@@ -318,31 +327,55 @@ exports.deleteImageProduct = (req, res) => {
 }
 
 /**
+ * Handle Add category product
+ *
+ * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
+ * @param {Response<P, ResBody, ReqQuery>} res
+ */
+exports.addCategoryProduct = (req, res) => {
+    const {product_id, category_id} = req.body
+    if (typeof product_id == "undefined" || typeof category_id == "undefined") {
+        return res.status(400).json({message: "Product id and category id needed"})
+    }
+
+    db("category")
+        .insert({product_id, category_id})
+        .then(() => res.status(201).json({message: "Category added"}))
+        .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
+}
+
+/**
+ * Handle delete category product
+ *
+ * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
+ * @param {Response<P, ResBody, ReqQuery>} res
+ */
+exports.deleteCategoryProduct = (req, res) => {
+    const {product_id, category_id} = req.body
+    if (typeof product_id == "undefined" || typeof category_id == "undefined") {
+        return res.status(400).json({message: "Product id and category id needed"})
+    }
+    db("category")
+        .where({product_id, category_id})
+        .del()
+        .then(() => res.status(202).json({message: "Category deleted"}))
+        .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
+}
+
+/**
  * Handle Add genre product
  *
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.addGenreProduct = (req, res) => {
-    const {product_id, category_id} = req.body
-    if (typeof product_id == "undefined" || typeof category_id == "undefined") {
-        return res.status(400).json({message: "Product id and category id needed"})
+    const {product_id, genre_id} = req.body
+    if (typeof product_id == "undefined" || typeof genre_id == "undefined") {
+        return res.status(400).json({message: "Product id and genre id needed"})
     }
     db("genre")
-        .insert({product_id, category_id})
+        .insert({product_id, genre_id})
         .then(() => res.status(201).json({message: "Genre added"}))
-        .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
-}
-
-exports.toggleTodayOffer = (req, res) => {
-    const {product_id, offer_status} = req.body
-    if (typeof offer_status !== "boolean"){
-        return res.status(400).json({message: "offer_status must be boolean"})
-    }
-    db("product")
-        .where({id: product_id})
-        .update({today_offer: offer_status})
-        .then(() => res.status(201).json({message: "Todays offer updated"}))
         .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
 }
 
@@ -353,14 +386,26 @@ exports.toggleTodayOffer = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.deleteGenreProduct = (req, res) => {
-    const {product_id, category_id} = req.body
-    if (typeof product_id == "undefined" || typeof category_id == "undefined") {
-        return res.status(400).json({message: "Product id and category id needed"})
+    const {product_id, genre_id} = req.body
+    if (typeof product_id == "undefined" || typeof genre_id == "undefined") {
+        return res.status(400).json({message: "Product id and genre id needed"})
     }
     db("genre")
-        .where({product_id, category_id})
+        .where({product_id, genre_id})
         .del()
         .then(() => res.status(202).json({message: "Genre deleted"}))
+        .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
+}
+
+exports.toggleTodayOffer = (req, res) => {
+    const {product_id, offer_status} = req.body
+    if (typeof offer_status !== "boolean") {
+        return res.status(400).json({message: "offer_status must be boolean"})
+    }
+    db("product")
+        .where({id: product_id})
+        .update({today_offer: offer_status})
+        .then(() => res.status(201).json({message: "Todays offer updated"}))
         .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
 }
 

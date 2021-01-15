@@ -44,8 +44,8 @@ exports.recommendProduct = (req,res) => {
         )
         .distinct("order_detail.product_id")
         .join("product_image","product_image.product_id","product.id")
-        .where('stock', '!=', 0)
         .join("order_detail","order_detail.product_id", "product.id")
+        .where('stock', '!=', 0)
         .orderBy("order_detail.product_id", "desc")
         .limit(5)
         .then(data => res.status(200).json({message: "recommend product", data}))
@@ -59,8 +59,9 @@ exports.todayOffer = (req,res) => {
             "title",
             db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
         )
-        .where({today_offer: true})
         .join("product_image","product_image.product_id","product.id")
+        .orderBy("created_at","desc")
+        .limit(10)
         .then(data => res.status(200).json({message: "todays offer product", data}))
         .catch(err => res.status(500).json(err))
 }
