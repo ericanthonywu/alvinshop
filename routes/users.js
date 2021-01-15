@@ -1,6 +1,6 @@
 const express = require('express');
 const {addCart, showCart, updateQuantity, deleteCart, order} = require("../controller/user/orderController");
-const {bannerUser, ourPartner, searchProduct, recommendProduct, todayOffer, getCategory} = require("../controller/user/homeController");
+const {bannerUser, ourPartner, searchProduct, recommendProduct, todayOffer, getCategory,getGenre} = require("../controller/user/homeController");
 
 const {detailProduct, addToFavourites, removeToFavourites} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
@@ -31,5 +31,6 @@ router.post('/removeToFavourites', authMiddleware, removeToFavourites)
 
 router.post("/order", authMiddleware, order)
 router.get("/getCategory", getCategory)
+router.get("/getGenre", getGenre)
 
 module.exports = router;
