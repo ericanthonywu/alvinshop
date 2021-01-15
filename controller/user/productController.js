@@ -17,12 +17,30 @@ exports.detailProduct = (req, res) => {
                         db.raw(`CONCAT('uploads/product/', image_name) as product_image`)
                     )
                     .then(imageData => {
-                        trx("genre")
+                        trx("category")
                             .where({product_id: id})
-                            .join("master_category", "master_category.id", "genre.category_id")
-                            .select("master_category.name as category_name")
-                            .then(category_data => trx.commit({...data, imageData, category_data}))
-                            .catch(trx.rollback)
+                            .join("master_category", "category.category_id", "master_category.id")
+                            .select("master_category.id as id", "master_category.name as category")
+                            .then(category => {
+                                trx("genre")
+                                    .join("master_genre", "genre.genre_id", "master_genre.id")
+                                    .select("master_genre.id as id", "master_genre.name as genre")
+                                    .where({product_id: id})
+                                    .then(genre => {
+                                        trx("device_product")
+                                            .where({product_id: id})
+                                            .join("master_device", "device_product.device_id", "master_device.id")
+                                            .select("master_device.id as id", "master_device.name as device")
+                                            .then(device =>
+                                                trx.commit({
+                                                    image: {data: imageData, prefix: "uploads/product"},
+                                                    category,
+                                                    device,
+                                                    genre
+                                                })
+                                            ).catch(trx.rollback)
+                                    }).catch(trx.rollback)
+                            }).catch(trx.rollback)
                     }).catch(trx.rollback)
             }).catch(trx.rollback)
     }).then(data => res.status(200).json({message: "product data", data}))
