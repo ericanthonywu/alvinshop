@@ -80,7 +80,7 @@ exports.register = (req, res) => {
  * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse} req
  * @param {Response<P, ResBody, ReqQuery>} res
  */
-exports.verifyEmail = (req, res, next) => {
+exports.verifyEmail = (req, res) => {
     const {token} = req.body
     db("user")
         .count("token as count")

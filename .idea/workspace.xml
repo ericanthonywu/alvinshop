@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/controller/user/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/authController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,17 +85,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RUN BACKEND" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/bin/www" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -124,7 +114,7 @@
       <workItem from="1608971348709" duration="488000" />
       <workItem from="1609341047443" duration="14731000" />
       <workItem from="1609759022297" duration="92000" />
-      <workItem from="1610640542958" duration="5301000" />
+      <workItem from="1610640542958" duration="5986000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -371,7 +361,35 @@
       <option name="project" value="LOCAL" />
       <updated>1610726221208</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="update">
+      <created>1610726275857</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726275857</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update">
+      <created>1610726285440</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726285440</updated>
+    </task>
+    <task id="LOCAL-00038" summary="update">
+      <created>1610726408588</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726408588</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update">
+      <created>1610726528765</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726528765</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
