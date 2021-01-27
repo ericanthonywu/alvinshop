@@ -60,7 +60,7 @@ exports.todayOffer = (req,res) => {
             db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
         )
         .join("product_image","product_image.product_id","product.id")
-        .orderBy("created_at","desc")
+        .orderBy("product.created_at","desc")
         .limit(10)
         .then(data => res.status(200).json({message: "todays offer product", data}))
         .catch(err => res.status(500).json(err))

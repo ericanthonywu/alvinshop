@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/authController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +114,7 @@
       <workItem from="1609341047443" duration="14731000" />
       <workItem from="1609759022297" duration="92000" />
       <workItem from="1610640542958" duration="5986000" />
+      <workItem from="1610807231043" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -389,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610726528765</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update">
+      <created>1610807488992</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1610807488992</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
