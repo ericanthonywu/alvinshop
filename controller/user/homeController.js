@@ -24,7 +24,7 @@ exports.searchProduct = (req,res) => {
             db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
         )
         .join("product_image","product_image.product_id","product.id")
-        .then(data => res.status(200).json({message: "banner", data}))
+        .then(data => res.status(200).json({message: "banner", data: {data, prefix: "uploads/our_partner"}}))
         .catch(err => res.status(500).json(err))
 }
 
