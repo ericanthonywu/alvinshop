@@ -7,17 +7,18 @@ const db = require("../../database")
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.showOrder = (req, res) => {
-    const {limit, offset} = req.body
+    const {limit, offset} = req.query
     db("order")
         .select(
+            "order.id as order_id",
             "order_code",
             "total_price",
             "user.username",
             "ordered_at",
         )
         .join("user", "order.user_id", "user.id")
-        .where("order.id", ">", limit)
-        .where("order.id", "<", limit + offset)
+        .limit(limit)
+        .offset(offset)
         .then(data => res.status(200).json({message: "Order data", data}))
         .catch(err => res.status(500).json({message: "Error running query", error: err}))
 }

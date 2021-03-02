@@ -7,11 +7,5 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://151.106.112.191:3306/alvinshop</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="alvinshop@localhost" uuid="ed75b4ca-1261-474d-9e7a-b53ac41b5047">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/alvinshop</jdbc-url>
-    </data-source>
   </component>
 </project>

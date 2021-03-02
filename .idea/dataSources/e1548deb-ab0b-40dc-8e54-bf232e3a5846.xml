@@ -1268,7 +1268,7 @@ SELECT|sys.sys_config
     </column>
     <column id="373" parent="295" name="order_code">
       <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
     </column>
     <column id="374" parent="295" name="total_price">
       <Position>3</Position>

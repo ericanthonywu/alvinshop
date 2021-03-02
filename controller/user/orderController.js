@@ -21,7 +21,9 @@ exports.showCart = (req, res) => {
             "product.title as product_title",
             db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
         )
-        .join("product_image", "product_image.product_id", "product.id")
+        .leftJoin("product_image", "product_image.product_id", "product.id")
+        .then(data => res.status(200).json({message: "cart data", data}))
+        .catch(err => res.status(500).json(err))
 }
 
 exports.updateQuantity = (req, res) => {

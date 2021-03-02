@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix bug">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/orderController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +123,9 @@
       <workItem from="1610807231043" duration="715000" />
       <workItem from="1611722800138" duration="1489000" />
       <workItem from="1611762773444" duration="565000" />
+      <workItem from="1612379829243" duration="785000" />
+      <workItem from="1614679727356" duration="921000" />
+      <workItem from="1614685469497" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -405,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611722888820</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix bug">
+      <created>1612379920360</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1612379920360</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
