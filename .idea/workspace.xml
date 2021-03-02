@@ -19,14 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix bug">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/orderController.js" afterDir="false" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix user bug api">
+      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +119,7 @@
       <workItem from="1611762773444" duration="565000" />
       <workItem from="1612379829243" duration="785000" />
       <workItem from="1614679727356" duration="921000" />
-      <workItem from="1614685469497" duration="2250000" />
+      <workItem from="1614685469497" duration="2422000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -421,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612379920360</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="fix user bug api">
+      <created>1614688212172</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1614688212172</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,6 +449,7 @@
     <MESSAGE value="add static uploads" />
     <MESSAGE value="update" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="fix user bug api" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix user bug api" />
   </component>
 </project>
