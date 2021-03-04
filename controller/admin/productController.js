@@ -186,7 +186,7 @@ exports.addProduct = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.editProduct = (req, res) => {
-    const {id, title, description, price, stock, youtube_link, discount = 10} = req.body
+    const {id, title, description, price, stock, youtube_link, discount, tahun_rilis, publisher} = req.body
     db("product").update({
         title,
         description,
