@@ -194,6 +194,8 @@ exports.editProduct = (req, res) => {
         stock,
         youtube_link,
         discount,
+        tahun_rilis,
+        publisher,
         updated_at: moment().format("YYYY-MM-DD HH:mm:ss").toString()
     })
         .where({id})
