@@ -136,8 +136,8 @@ exports.showImageProductById = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.addProduct = (req, res) => {
-    const {title, description, price, stock, youtube_link, discount, genre, device, category} = req.body
-    if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device) {
+    const {title, description, price, stock, youtube_link, discount, genre, device, category, tahun_rilis, publisher} = req.body
+    if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device || !tahun_rilis || !publisher) {
         return res.status(400).json({message: "Invalid parameters"})
     }
 
@@ -155,6 +155,8 @@ exports.addProduct = (req, res) => {
                 youtube_link,
                 discount,
                 created_by: res.userData.id,
+                tahun_rilis,
+                publisher
             }, "id")
             const id = data[0]
             await trx("product_image").insert(

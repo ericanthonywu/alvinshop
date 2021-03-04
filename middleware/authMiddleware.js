@@ -18,7 +18,7 @@ exports.authMiddleware = (req, res, next) => {
     if (!token) return res.status(400).json({message: "Token auth required at header:token"})
     jwt.verify(token, process.env.JWTSECRETTOKEN, (err, data) => {
         if (err) {
-            res.status(419).json(err)
+            res.status(419).json({message: "error jwt middleware", error: err})
             if (req.files) {
                 for (let i = 0; i < req.files.length; i++) {
                     fs.unlinkSync(path.join(__dirname, `../uploads/${req.dest}/${req.files[i].filename}`))

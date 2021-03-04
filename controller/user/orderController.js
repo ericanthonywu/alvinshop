@@ -47,6 +47,9 @@ exports.deleteCart = (req, res) => {
 }
 
 exports.order = (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({message: "file is required"})
+    }
     db.transaction(trx => {
         trx("cart")
             .select('product_id', 'quantity')
@@ -59,6 +62,7 @@ exports.order = (req, res) => {
                         trx("order")
                             .insert({
                                 user_id: res.userData.id,
+                                file: req.file.filename
                             }, 'id')
                             .then(([order_id]) => {
                                 trx("order_detail")
@@ -72,7 +76,7 @@ exports.order = (req, res) => {
                                                     .where({order_id})
                                                     .sum("product.price")
                                                     .first()
-                                                    .join("product","product.id","order_detail.product_id")
+                                                    .join("product", "product.id", "order_detail.product_id")
                                             })
                                             .then(trx.commit)
                                             .catch(trx.rollback)

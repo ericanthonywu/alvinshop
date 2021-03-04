@@ -1,8 +1,16 @@
 const express = require('express');
 const {getSettings} = require("../controller/admin/settingsController");
 const {addCart, showCart, updateQuantity, deleteCart, order} = require("../controller/user/orderController");
-const {bannerUser, ourPartner, searchProduct, recommendProduct, todayOffer, getCategory,getGenre} = require("../controller/user/homeController");
-
+const {
+    bannerUser,
+    ourPartner,
+    searchProduct,
+    recommendProduct,
+    todayOffer,
+    getCategory,
+    getGenre
+} = require("../controller/user/homeController");
+const fileHandler = require("../middleware/uploadFileMiddleware")
 const {detailProduct, addToFavourites, removeToFavourites} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {login, register, verifyEmail} = require("../controller/user/authController");
@@ -30,7 +38,7 @@ router.delete('/deleteCart', authMiddleware, deleteCart)
 router.post('/addToFavourites', authMiddleware, addToFavourites)
 router.post('/removeToFavourites', authMiddleware, removeToFavourites)
 
-router.post("/order", authMiddleware, order)
+router.post("/order", fileHandler("order").single("image"), authMiddleware, order)
 router.get("/getCategory", getCategory)
 router.get("/getGenre", getGenre)
 

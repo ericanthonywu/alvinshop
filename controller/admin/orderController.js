@@ -15,11 +15,12 @@ exports.showOrder = (req, res) => {
             "total_price",
             "user.username",
             "ordered_at",
+            "file"
         )
         .join("user", "order.user_id", "user.id")
         .limit(limit)
         .offset(offset)
-        .then(data => res.status(200).json({message: "Order data", data}))
+        .then(data => res.status(200).json({message: "Order data", data: {data, prefix: "uploads/order"}}))
         .catch(err => res.status(500).json({message: "Error running query", error: err}))
 }
 
