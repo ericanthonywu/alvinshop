@@ -34,7 +34,7 @@ exports.detailProduct = (req, res) => {
                                             .then(device =>
                                                 trx.commit({
                                                     ...data,
-                                                    image: {data: imageData, prefix: "uploads/produk"},
+                                                    image: imageData,
                                                     category,
                                                     device,
                                                     genre
