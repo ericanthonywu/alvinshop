@@ -21,7 +21,7 @@ exports.searchProduct = (req,res) => {
             "title",
             "price",
             "stock",
-            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
         .leftJoin("product_image","product_image.product_id","product.id")
         .then(data => res.status(200).json({message: "banner", data: {data, prefix: "uploads/our_partner"}}))
@@ -40,7 +40,7 @@ exports.recommendProduct = (req,res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
         // .distinct("order_detail.product_id")
         .leftJoin("product_image","product_image.product_id","product.id")
@@ -57,7 +57,7 @@ exports.todayOffer = (req,res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
         .leftJoin("product_image","product_image.product_id","product.id")
         .orderBy("product.created_at","desc")
