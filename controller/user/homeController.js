@@ -62,7 +62,6 @@ exports.todayOffer = (req,res) => {
         .leftJoin("product_image","product_image.product_id","product.id")
         .orderBy("product.created_at","desc")
         .limit(10)
-        .distinct("product.id")
         .then(data => res.status(200).json({message: "todays offer product", data}))
         .catch(err => res.status(500).json(err))
 }
