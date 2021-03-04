@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="add missing feature">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix typo" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +118,7 @@
       <workItem from="1612379829243" duration="785000" />
       <workItem from="1614679727356" duration="921000" />
       <workItem from="1614685469497" duration="3304000" />
-      <workItem from="1614879516406" duration="1430000" />
+      <workItem from="1614879516406" duration="1757000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1599907132075</created>
@@ -452,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614880662076</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fix typo">
+      <created>1614881303669</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1614881303669</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,6 +486,7 @@
     <MESSAGE value="fix user bug api" />
     <MESSAGE value="add missing feture" />
     <MESSAGE value="add missing feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add missing feature" />
+    <MESSAGE value="fix typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typo" />
   </component>
 </project>

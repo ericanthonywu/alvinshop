@@ -19,7 +19,7 @@ exports.showCart = (req, res) => {
             "product.stock as product_stock",
             "product.discount as product_discount",
             "product.title as product_title",
-            db.raw("CONCAT('uploads/product/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
         .leftJoin("product_image", "product_image.product_id", "product.id")
         .then(data => res.status(200).json({message: "cart data", data}))

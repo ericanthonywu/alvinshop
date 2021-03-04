@@ -14,7 +14,7 @@ exports.detailProduct = (req, res) => {
                 trx("product_image")
                     .where({product_id: id})
                     .select(
-                        db.raw(`CONCAT('uploads/product/', image_name) as product_image`)
+                        db.raw(`CONCAT('uploads/produk/', image_name) as product_image`)
                     )
                     .then(imageData => {
                         trx("category")
@@ -34,7 +34,7 @@ exports.detailProduct = (req, res) => {
                                             .then(device =>
                                                 trx.commit({
                                                     ...data,
-                                                    image: {data: imageData, prefix: "uploads/product"},
+                                                    image: {data: imageData, prefix: "uploads/produk"},
                                                     category,
                                                     device,
                                                     genre
