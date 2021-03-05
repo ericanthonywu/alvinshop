@@ -21,9 +21,10 @@ exports.searchProduct = (req,res) => {
             "title",
             "price",
             "stock",
-            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         .leftJoin("product_image","product_image.product_id","product.id")
+        .joinRaw("(select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
         .then(data => res.status(200).json({message: "banner", data: {data, prefix: "uploads/our_partner"}}))
         .catch(err => res.status(500).json(err))
 }
@@ -40,11 +41,12 @@ exports.recommendProduct = (req,res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         // .distinct("order_detail.product_id")
         .leftJoin("product_image","product_image.product_id","product.id")
         .leftJoin("order_detail","order_detail.product_id", "product.id")
+        .joinRaw("(select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
         .where('stock', '>', 0)
         .orderBy("order_detail.product_id", "desc")
         .limit(5)
@@ -57,9 +59,10 @@ exports.todayOffer = (req,res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         .leftJoin("product_image","product_image.product_id","product.id")
+        .joinRaw("(select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
         .orderBy("product.created_at","desc")
         .limit(10)
         .then(data => res.status(200).json({message: "todays offer product", data}))

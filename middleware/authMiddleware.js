@@ -5,7 +5,7 @@ const path = require('path');
 /**
  * Middleware for JWT and remove file handler
  *
- * @param {Request<P, ResBody, ReqBody, ReqQuery>|http.ServerResponse|Request<ParamsDictionary, any, any, QueryString.ParsedQs>} req
+ * @param {Request} req
  * @param {Response} res
  * @param {NextFunction|Response<any>} next
  */
