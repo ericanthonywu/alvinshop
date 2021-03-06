@@ -57,7 +57,7 @@ exports.confirmOrder = (req, res) => {
     const {confirm, id} = req.body
     let order_confirmed;
 
-    switch (confirm) {
+    switch (parseInt(confirm)) {
         case 1:
             order_confirmed = true
             break;
