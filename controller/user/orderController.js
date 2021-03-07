@@ -40,6 +40,7 @@ exports.showCart = (req, res) => {
         .select(
             'quantity',
             'product.price as product_price',
+            'product.id as product_id',
             "product.stock as product_stock",
             "product.discount as product_discount",
             "product.title as product_title",
