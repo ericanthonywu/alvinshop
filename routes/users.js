@@ -33,7 +33,7 @@ router.get("/todayOffer", todayOffer)
 router.post('/addCart', authMiddleware, addCart)
 router.get('/showCart', authMiddleware, showCart)
 router.put('/updateQuantity', authMiddleware, updateQuantity)
-router.delete('/deleteCart', authMiddleware, deleteCart)
+router.post('/deleteCart', authMiddleware, deleteCart)
 
 router.post('/addToFavourites', authMiddleware, addToFavourites)
 router.post('/removeToFavourites', authMiddleware, removeToFavourites)
