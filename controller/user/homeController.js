@@ -1,6 +1,6 @@
 const db = require('../../database');
 
-exports.bannerUser = (req,res) => {
+exports.bannerUser = (req, res) => {
     db("banner")
         .select(
             'banner_name',
@@ -12,7 +12,7 @@ exports.bannerUser = (req,res) => {
         .catch(err => res.status(500).json(err))
 }
 
-exports.searchProduct = (req,res) => {
+exports.searchProduct = (req, res) => {
     const {keyword} = req.query
     db("product")
         .where('title', 'like', `${keyword}%`)
@@ -23,20 +23,20 @@ exports.searchProduct = (req,res) => {
             "stock",
             db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
-        .leftJoin("product_image","product_image.product_id","product.id")
+        .leftJoin("product_image", "product_image.product_id", "product.id")
         .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
         .then(data => res.status(200).json({message: "banner", data: {data, prefix: "uploads/our_partner"}}))
         .catch(err => res.status(500).json(err))
 }
 
-exports.ourPartner = (req,res) => {
+exports.ourPartner = (req, res) => {
     db("our_partner")
         .select('*')
         .then(data => res.status(200).json({message: "our partner", data}))
         .catch(err => res.status(500).json(err))
 }
 
-exports.recommendProduct = (req,res) => {
+exports.recommendProduct = (req, res) => {
     db("product")
         .select(
             "product.id as product_id",
@@ -44,8 +44,8 @@ exports.recommendProduct = (req,res) => {
             db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         // .distinct("order_detail.product_id")
-        .leftJoin("product_image","product_image.product_id","product.id")
-        .leftJoin("order_detail","order_detail.product_id", "product.id")
+        .leftJoin("product_image", "product_image.product_id", "product.id")
+        .leftJoin("order_detail", "order_detail.product_id", "product.id")
         .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
         .where('stock', '>', 0)
         .orderBy("order_detail.product_id", "desc")
@@ -54,38 +54,44 @@ exports.recommendProduct = (req,res) => {
         .catch(err => res.status(500).json(err))
 }
 
-exports.todayOffer = (req,res) => {
+exports.todayOffer = (req, res) => {
     db("product")
         .select(
             "product.id as product_id",
             "title",
             db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
-        .leftJoin("product_image","product_image.product_id","product.id")
+        .leftJoin("product_image", "product_image.product_id", "product.id")
         .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
-        .orderBy("product.created_at","desc")
-        .limit(10)
+        .orderBy("product.created_at", "desc")
+        .limit(5)
         .then(data => res.status(200).json({message: "todays offer product", data}))
         .catch(err => res.status(500).json(err))
 }
 
-exports.getCategory = (req,res) => {
-    db("master_category")
-        .select("name")
-        .then(data => res.status(200).json({message: "data categories", data}))
-        .catch(err => res.status(500).json(err))
-}
-
-exports.getGenre = (req,res) => {
-    db("master_genre")
-        .select("name")
-        .then(data => res.status(200).json({message: "data genre", data}))
-        .catch(err => res.status(500).json(err))
-}
-
-exports.getSettings = (req,res) => {
+exports.getSettings = (req, res) => {
     db("settings")
         .select("*")
         .then(data => res.status(200).json({message: "data setting", data}))
         .catch(err => res.status(500).json(err))
+}
+
+exports.getListFilter = async (req, res) => {
+    try {
+        const {device_id} = req.query
+
+        const genre = await db("master_genre")
+            .select("id", "name")
+            .where({device_id})
+
+        const category = await db("master_category")
+            .select("id", "name")
+            .where({device_id})
+
+        res.status(200).json({message: "list filter", data: {genre, category}})
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
 }

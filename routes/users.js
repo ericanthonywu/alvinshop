@@ -7,8 +7,7 @@ const {
     searchProduct,
     recommendProduct,
     todayOffer,
-    getCategory,
-    getGenre
+    getListFilter,
 } = require("../controller/user/homeController");
 const fileHandler = require("../middleware/uploadFileMiddleware")
 const {detailProduct, addToFavourites, removeToFavourites} = require("../controller/user/productController");
@@ -39,8 +38,7 @@ router.post('/addToFavourites', authMiddleware, addToFavourites)
 router.post('/removeToFavourites', authMiddleware, removeToFavourites)
 
 router.post("/order", fileHandler("order").single("image"), authMiddleware, order)
-router.get("/getCategory", getCategory)
-router.get("/getGenre", getGenre)
+router.get("/getListFilter", getListFilter)
 
 router.get("/getSettings", getSettings)
 

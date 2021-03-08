@@ -8,6 +8,7 @@ const {showOrder, confirmOrder, showDetailOrder} = require("../controller/admin/
 const {showDevice, addDevice, deleteDevice, editDevice} = require("../controller/admin/deviceController");
 const {showBanner, addBanner, deleteBanner, editBanner, updateOrderBanner} = require("../controller/admin/bannerController");
 const fileHandler = require("../middleware/uploadFileMiddleware")
+const {showGenre, addGenre, editGenre, deleteGenre} = require("../controller/admin/genreController");
 const {showOurPartner, addOurPartner, deleteOurPartner, editOurPartner} = require("../controller/admin/ourPartnerController");
 const {updateSettings, getSettings, migrateSettings} = require("../controller/admin/settingsController");
 
@@ -18,6 +19,11 @@ router.get("/showCategory", authMiddleware, showCategory)
 router.post("/addCategory", authMiddleware, addCategory)
 router.put("/editCategory", authMiddleware, editCategory)
 router.post("/deleteCategory", authMiddleware, deleteCategory)
+
+router.get("/showGenre", authMiddleware, showGenre)
+router.post("/addGenre", authMiddleware, addGenre)
+router.put("/editGenre", authMiddleware, editGenre)
+router.post("/deleteGenre", authMiddleware, deleteGenre)
 
 router.post("/showProduk", authMiddleware, showProduk)
 router.post("/showProdukById", authMiddleware, showProdukById)

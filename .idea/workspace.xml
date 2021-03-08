@@ -20,6 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix bug">
+      <change afterPath="$PROJECT_DIR$/controller/admin/genreController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/categoryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +83,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controller/admin" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -84,6 +93,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RUN BACKEND" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/bin/www" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -123,14 +143,7 @@
       <workItem from="1614879516406" duration="1913000" />
       <workItem from="1614881787006" duration="288000" />
       <workItem from="1614882123615" duration="7187000" />
-      <workItem from="1615141673653" duration="289000" />
-    </task>
-    <task id="LOCAL-00008" summary="update">
-      <created>1609346470125</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609346470125</updated>
+      <workItem from="1615141673653" duration="3987000" />
     </task>
     <task id="LOCAL-00009" summary="update">
       <created>1609346539330</created>
@@ -468,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615141702769</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fix bug">
+      <created>1615142870110</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1615142870111</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
