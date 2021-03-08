@@ -87,6 +87,11 @@ exports.deleteCart = (req, res) => {
 }
 
 exports.order = async (req, res) => {
+    const {nama_rekening, bank, tgl_transfer} = req.body
+    if (!nama_rekening || !bank || !tgl_transfer){
+        return res.status(400).json({message: "invalid request"})
+    }
+
     if (!req.file) {
         return res.status(400).json({message: "file is required"})
     }
@@ -113,7 +118,10 @@ exports.order = async (req, res) => {
         const [order_id] = await db("order")
             .insert({
                 user_id: res.userData.id,
-                file: req.file.filename
+                file: req.file.filename,
+                nama_rekening,
+                bank,
+                tgl_transfer
             }, 'id')
 
         await db("order_detail")
@@ -131,7 +139,6 @@ exports.order = async (req, res) => {
             })
         res.status(200).json({message: "ordered successfully"})
     } catch (err) {
-        console.log(err)
         res.status(500).json(err)
     }
 }
