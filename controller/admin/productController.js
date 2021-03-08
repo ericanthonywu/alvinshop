@@ -85,9 +85,9 @@ exports.showDetailProduct = (req, res) => {
                                     .select("master_genre.id as id", "master_genre.name as genre")
                                     .where({product_id})
                                     .then(genre => {
-                                        trx("device_product")
+                                        trx("device")
                                             .where({product_id})
-                                            .join("master_device", "device_product.device_id", "master_device.id")
+                                            .join("master_device", "device.device_id", "master_device.id")
                                             .select("master_device.id as id", "master_device.name as device")
                                             .then(device =>
                                                 trx.commit({
@@ -167,7 +167,7 @@ exports.addProduct = (req, res) => {
             )
             await trx("genre")
                 .insert(JSON.parse(genre).map(genre_id => ({genre_id, product_id: id})))
-            await trx("device_product")
+            await trx("device")
                 .insert(JSON.parse(device).map(device_id => ({device_id, product_id: id})))
             await trx("category")
                 .insert(JSON.parse(category).map(category_id => ({category_id, product_id: id})))
@@ -424,7 +424,7 @@ exports.addDeviceProduct = (req, res) => {
     if (typeof product_id == "undefined" || typeof device_id == "undefined") {
         return res.status(400).json({message: "Product id and category id needed"})
     }
-    db("device_product")
+    db("device")
         .insert({product_id, device_id})
         .then(() => res.status(201).json({message: "Device added"}))
         .catch(err => res.status(500).json({message: "Query failed to be runned", error: err}))
@@ -441,7 +441,7 @@ exports.deleteDeviceProduct = (req, res) => {
     if (typeof product_id == "undefined" || typeof device_id == "undefined") {
         return res.status(400).json({message: "Product id and category id needed"})
     }
-    db("device_product")
+    db("device")
         .where({product_id, device_id})
         .del()
         .then(() => res.status(202).json({message: "Device deleted"}))

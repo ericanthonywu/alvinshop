@@ -10,7 +10,7 @@ const {
     getListFilter,
 } = require("../controller/user/homeController");
 const fileHandler = require("../middleware/uploadFileMiddleware")
-const {detailProduct, addToFavourites, removeToFavourites} = require("../controller/user/productController");
+const {detailProduct, addToFavourites, removeToFavourites, getProductByGenreAndCategory} = require("../controller/user/productController");
 const {authMiddleware} = require("../middleware/authMiddleware");
 const {login, register, verifyEmail} = require("../controller/user/authController");
 const router = express.Router();
@@ -39,6 +39,8 @@ router.post('/removeToFavourites', authMiddleware, removeToFavourites)
 
 router.post("/order", fileHandler("order").single("image"), authMiddleware, order)
 router.get("/getListFilter", getListFilter)
+
+router.post('/getProductByGenreAndCategory', getProductByGenreAndCategory)
 
 router.get("/getSettings", getSettings)
 

@@ -15,7 +15,10 @@ exports.showOrder = (req, res) => {
             "total_price",
             "user.username",
             "ordered_at",
-            "file"
+            "file",
+            "nama_rekening",
+            "bank",
+            "tgl_transfer"
         )
         .join("user", "order.user_id", "user.id")
         .limit(limit)

@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix bug">
-      <change afterPath="$PROJECT_DIR$/controller/admin/genreController.js" afterDir="false" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="add vlaidation">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin/categoryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/categoryController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,21 +141,7 @@
       <workItem from="1614879516406" duration="1913000" />
       <workItem from="1614881787006" duration="288000" />
       <workItem from="1614882123615" duration="7187000" />
-      <workItem from="1615141673653" duration="3987000" />
-    </task>
-    <task id="LOCAL-00009" summary="update">
-      <created>1609346539330</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1609346539330</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1609346702589</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1609346702589</updated>
+      <workItem from="1615141673653" duration="4637000" />
     </task>
     <task id="LOCAL-00011" summary="update">
       <created>1609347128458</created>
@@ -488,7 +472,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615142870111</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix minus">
+      <created>1615219694775</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1615219694775</updated>
+    </task>
+    <task id="LOCAL-00059" summary="add vlaidation">
+      <created>1615219885182</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1615219885182</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,6 +518,8 @@
     <MESSAGE value="fix typo" />
     <MESSAGE value="debug" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="fix minus" />
+    <MESSAGE value="add vlaidation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add vlaidation" />
   </component>
 </project>

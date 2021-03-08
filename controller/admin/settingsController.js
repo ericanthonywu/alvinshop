@@ -24,7 +24,7 @@ exports.getSettings = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.updateSettings = (req, res) => {
-    const {name, address, phone_numbers, whatsapp_url, bukalapak, shopee, tokopedia, description} = req.body
+    const {name, address, phone_numbers, whatsapp_url, bukalapak, shopee, tokopedia, description, list_rekening} = req.body
     const updateData = {
         name,
         address,
@@ -34,7 +34,8 @@ exports.updateSettings = (req, res) => {
         shopee,
         tokopedia,
         updated_at: moment().format("YYYY-MM-DD").toString(),
-        description
+        description,
+        list_rekening
     }
     db.transaction(trx => {
         if (req.file) {
