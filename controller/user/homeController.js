@@ -71,11 +71,18 @@ exports.todayOffer = (req, res) => {
 
 exports.getSettings = (req, res) => {
     db("settings")
-        .select("*")
+        .where({id: 1})
+        .first()
         .then(data => res.status(200).json({message: "data setting", data}))
         .catch(err => res.status(500).json(err))
 }
 
+exports.getDevice = (req, res) => {
+    db("master_device")
+        .then(data => res.status(200).json({message: "list device", data}))
+        .catch(err => res.status(500).json(err))
+
+}
 exports.getListFilter = async (req, res) => {
     try {
         const {device_id} = req.query
