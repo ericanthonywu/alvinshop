@@ -136,7 +136,19 @@ exports.showImageProductById = (req, res) => {
  * @param {Response<P, ResBody, ReqQuery>} res
  */
 exports.addProduct = (req, res) => {
-    const {title, description, price, stock, youtube_link, discount, genre, device, category, tahun_rilis, publisher} = req.body
+    const {
+        title,
+        description,
+        price,
+        stock,
+        youtube_link,
+        discount,
+        genre,
+        device,
+        category,
+        tahun_rilis,
+        publisher
+    } = req.body
     if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device || !tahun_rilis || !publisher) {
         return res.status(400).json({message: "Invalid parameters"})
     }
@@ -224,11 +236,9 @@ exports.deleteProduct = (req, res) => {
                     .del()
                     .then(trx.commit)
                     .catch(err => trx.rollback({message: "Failed to run query", error: err}))
-                try {
-                    data.forEach(({image_name}) => fs.unlinkSync(path.join(__dirname, "../../uploads/product/" + image_name)))
-                } catch (e) {
-                    return trx.rollback(e)
-                }
+
+                data.forEach(({image_name}) => fs.unlinkSync(path.join(__dirname, "../../uploads/product/" + image_name)))
+
             }).catch(err => trx.rollback({message: "Failed to run query", error: err}))
     }).then(() => res.status(202).json({message: "Product Deleted"}))
         .catch(err => res.status(500).json(err))
