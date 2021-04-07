@@ -1070,6 +1070,7 @@ SELECT|sys.sys_config
       <ColNames>product_id</ColNames>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="333" parent="288" name="id">
       <Position>1</Position>
@@ -1107,6 +1108,7 @@ SELECT|sys.sys_config
       <ColNames>product_id</ColNames>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="341" parent="288" name="device_master_device_id_fk">
       <ColNames>device_id</ColNames>
@@ -1149,6 +1151,7 @@ SELECT|sys.sys_config
       <ColNames>product_id</ColNames>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="350" parent="289" name="genre_master_genre_id_fk">
       <ColNames>genre_id</ColNames>
@@ -1490,6 +1493,7 @@ SELECT|sys.sys_config
       <ColNames>product_id</ColNames>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="424" parent="299" name="id">
       <Position>1</Position>
