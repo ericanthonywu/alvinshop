@@ -73,8 +73,8 @@ exports.getSettings = (req, res) => {
     db("settings")
         .where({id: 1})
         .first()
-        .then(data => res.status(200).json({message: "data setting", data}))
-        .catch(err => res.status(500).json(err))
+        .then(data => res.status(200).json({message: "Settings data", data: {data, prefix: "uploads/logo_icon"}}))
+        .catch(err => res.status(500).json({message: "Error execute query", error: err}))
 }
 
 exports.getDevice = (req, res) => {

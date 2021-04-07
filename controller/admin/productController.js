@@ -147,7 +147,7 @@ exports.addProduct = (req, res) => {
 
     db.transaction(async trx => {
         try {
-            const data = await trx("product").insert({
+            const [id] = await trx("product").insert({
                 title,
                 description,
                 price,
@@ -158,7 +158,7 @@ exports.addProduct = (req, res) => {
                 tahun_rilis,
                 publisher
             }, "id")
-            const id = data[0]
+
             await trx("product_image").insert(
                 req.files.map(({filename}) => ({
                     image_name: filename,

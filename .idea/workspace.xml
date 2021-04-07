@@ -19,8 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="add vlaidation">
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="add get devices">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/admin/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,13 +131,15 @@
       <workItem from="1614881787006" duration="288000" />
       <workItem from="1614882123615" duration="7187000" />
       <workItem from="1615141673653" duration="4935000" />
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1609347585345</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1609347585345</updated>
+      <workItem from="1615547197556" duration="475000" />
+      <workItem from="1615641792344" duration="37000" />
+      <workItem from="1616075521987" duration="2025000" />
+      <workItem from="1616089475761" duration="416000" />
+      <workItem from="1616433811286" duration="1313000" />
+      <workItem from="1616781714771" duration="2991000" />
+      <workItem from="1617198845303" duration="190000" />
+      <workItem from="1617734624534" duration="357000" />
+      <workItem from="1617800762544" duration="1983000" />
     </task>
     <task id="LOCAL-00013" summary="update">
       <created>1609347649575</created>
@@ -471,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615220472691</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add get devices">
+      <created>1615547441321</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1615547441321</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,6 +518,7 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="fix minus" />
     <MESSAGE value="add vlaidation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add vlaidation" />
+    <MESSAGE value="add get devices" />
+    <option name="LAST_COMMIT_MESSAGE" value="add get devices" />
   </component>
 </project>
