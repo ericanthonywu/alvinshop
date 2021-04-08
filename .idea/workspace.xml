@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="remove error delete">
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix get product image query">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1548deb-ab0b-40dc-8e54-bf232e3a5846.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
     </list>
@@ -136,14 +137,7 @@
       <workItem from="1616781714771" duration="2991000" />
       <workItem from="1617198845303" duration="190000" />
       <workItem from="1617734624534" duration="357000" />
-      <workItem from="1617800762544" duration="4686000" />
-    </task>
-    <task id="LOCAL-00016" summary="update">
-      <created>1609350678529</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1609350678529</updated>
+      <workItem from="1617800762544" duration="5312000" />
     </task>
     <task id="LOCAL-00017" summary="update">
       <created>1609350891351</created>
@@ -481,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617821258035</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="fix get product image query">
+      <created>1617910301954</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1617910301954</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,6 +519,7 @@
     <MESSAGE value="add get devices" />
     <MESSAGE value="update settings" />
     <MESSAGE value="remove error delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove error delete" />
+    <MESSAGE value="fix get product image query" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix get product image query" />
   </component>
 </project>

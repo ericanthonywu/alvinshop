@@ -15,15 +15,14 @@ exports.bannerUser = (req, res) => {
 exports.searchProduct = (req, res) => {
     const {keyword} = req.query
     db("product")
-        .where('title', 'like', `${keyword}%`)
+        .whereRaw(`MATCH (title) AGAINST (:keyword IN BOOLEAN MODE)`,{keyword: `${keyword}*`})
         .select(
             "product.id as product_id",
             "title",
             "price",
             "stock",
-            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
-        .leftJoin("product_image", "product_image.product_id", "product.id")
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
                 .select('id')
@@ -70,9 +69,8 @@ exports.todayOffer = (req, res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
-        .leftJoin("product_image", "product_image.product_id", "product.id")
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
                 .select('id')
