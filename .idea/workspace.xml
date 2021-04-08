@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="update settings" />
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="remove error delete">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,21 +136,7 @@
       <workItem from="1616781714771" duration="2991000" />
       <workItem from="1617198845303" duration="190000" />
       <workItem from="1617734624534" duration="357000" />
-      <workItem from="1617800762544" duration="2228000" />
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <created>1609350515286</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1609350515287</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1609350640187</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1609350640187</updated>
+      <workItem from="1617800762544" duration="4686000" />
     </task>
     <task id="LOCAL-00016" summary="update">
       <created>1609350678529</created>
@@ -478,7 +467,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617820795783</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="remove error delete">
+      <created>1617820995019</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1617820995019</updated>
+    </task>
+    <task id="LOCAL-00064" summary="remove error delete">
+      <created>1617821258035</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1617821258035</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,6 +517,7 @@
     <MESSAGE value="add vlaidation" />
     <MESSAGE value="add get devices" />
     <MESSAGE value="update settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="update settings" />
+    <MESSAGE value="remove error delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove error delete" />
   </component>
 </project>

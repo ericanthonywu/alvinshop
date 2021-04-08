@@ -24,8 +24,14 @@ exports.searchProduct = (req, res) => {
             db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         .leftJoin("product_image", "product_image.product_id", "product.id")
-        .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
-        .then(data => res.status(200).json({message: "banner", data: {data, prefix: "uploads/our_partner"}}))
+        .leftJoin("product_image", "product_image.id",
+            db.raw(`(${db("product_image")
+                .select('id')
+                .where({product_id: db.raw("product.id")})
+                .limit(1)
+                .toQuery()})`)
+        )
+        .then(data => res.status(200).json({message: "product data", data}))
         .catch(err => res.status(500).json(err))
 }
 
@@ -39,14 +45,19 @@ exports.ourPartner = (req, res) => {
 exports.recommendProduct = (req, res) => {
     db("product")
         .select(
-            "product.id as product_id",
+            "product.id as productId",
             "title",
-            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
-        // .distinct("order_detail.product_id")
-        .leftJoin("product_image", "product_image.product_id", "product.id")
+        .distinct("order_detail.product_id")
         .leftJoin("order_detail", "order_detail.product_id", "product.id")
-        .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
+        .leftJoin("product_image", "product_image.id",
+            db.raw(`(${db("product_image")
+                .select('id')
+                .where({product_id: db.raw("product.id")})
+                .limit(1)
+                .toQuery()})`)
+        )
         .where('stock', '>', 0)
         .orderBy("order_detail.product_id", "desc")
         .limit(5)
@@ -62,7 +73,13 @@ exports.todayOffer = (req, res) => {
             db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
         )
         .leftJoin("product_image", "product_image.product_id", "product.id")
-        .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
+        .leftJoin("product_image", "product_image.id",
+            db.raw(`(${db("product_image")
+                .select('id')
+                .where({product_id: db.raw("product.id")})
+                .limit(1)
+                .toQuery()})`)
+        )
         .orderBy("product.created_at", "desc")
         .limit(5)
         .then(data => res.status(200).json({message: "todays offer product", data}))
