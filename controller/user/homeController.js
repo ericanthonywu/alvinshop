@@ -15,7 +15,8 @@ exports.bannerUser = (req, res) => {
 exports.searchProduct = (req, res) => {
     const {keyword} = req.query
     db("product")
-        .whereRaw(`MATCH (title) AGAINST (:keyword IN BOOLEAN MODE)`,{keyword: `${keyword}*`})
+        .whereRaw(`MATCH (title) AGAINST (:keyword IN BOOLEAN MODE)`,
+            {keyword: `${keyword}*`})
         .select(
             "product.id as product_id",
             "title",

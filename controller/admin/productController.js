@@ -216,19 +216,18 @@ exports.deleteProduct = (req, res) => {
             .where({product_id: id})
             .select("image_name")
             .then(data => {
-                if (!data.length) {
-                    return trx.rollback({message: "Data not found"})
+                if (data.length) {
+                    try {
+                        data.forEach(({image_name}) => fs.unlinkSync(path.join(__dirname, "../../uploads/product/" + image_name)))
+                    } catch (e) {
+                        console.log(e)
+                    }
                 }
                 trx("product")
                     .where({id})
                     .del()
                     .then(trx.commit)
                     .catch(err => trx.rollback({message: "Failed to run query", error: err}))
-                try {
-                    data.forEach(({image_name}) => fs.unlinkSync(path.join(__dirname, "../../uploads/product/" + image_name)))
-                } catch (e) {
-                    console.log(e)
-                }
             }).catch(err => trx.rollback({message: "Failed to run query", error: err}))
     }).then(() => res.status(202).json({message: "Product Deleted"}))
         .catch(err => res.status(500).json(err))
