@@ -54,7 +54,6 @@ exports.getProductByGenreAndCategory = (req, res) => {
     db("product")
         .leftJoin('genre','genre.product_id','product.id')
         .leftJoin('category','category.product_id','product.id')
-        .leftJoin("product_image", "product_image.product_id", "product.id")
         .where({"category.category_id": category_id, "genre.genre_id": genre_id})
         .where('stock', '>', 0)
         .select(
