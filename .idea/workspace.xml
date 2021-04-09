@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="new search method">
+    <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="fix delete product bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user/homeController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +136,7 @@
       <workItem from="1617198845303" duration="190000" />
       <workItem from="1617734624534" duration="357000" />
       <workItem from="1617800762544" duration="6304000" />
-    </task>
-    <task id="LOCAL-00018" summary="update">
-      <created>1609351040212</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1609351040212</updated>
+      <workItem from="1617963798307" duration="521000" />
     </task>
     <task id="LOCAL-00019" summary="update">
       <created>1609351319274</created>
@@ -481,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617910960546</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="fix delete product bug">
+      <created>1617963995304</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1617963995305</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,6 +520,7 @@
     <MESSAGE value="remove error delete" />
     <MESSAGE value="fix get product image query" />
     <MESSAGE value="new search method" />
-    <option name="LAST_COMMIT_MESSAGE" value="new search method" />
+    <MESSAGE value="fix delete product bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix delete product bug" />
   </component>
 </project>
