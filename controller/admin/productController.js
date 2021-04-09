@@ -137,7 +137,7 @@ exports.showImageProductById = (req, res) => {
  */
 exports.addProduct = (req, res) => {
     const {title, description, price, stock, youtube_link, discount, genre, device, category, tahun_rilis, publisher} = req.body
-    if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device || !tahun_rilis || !publisher) {
+    if (!title || !description || !price || !stock || !youtube_link || !discount || !genre || !device || !publisher) {
         return res.status(400).json({message: "Invalid parameters"})
     }
 
