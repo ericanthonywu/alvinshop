@@ -49,7 +49,7 @@ exports.recommendProduct = (req, res) => {
             "title",
             db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
-        .distinct("order_detail.product_id")
+        // .distinct("order_detail.product_id")
         .leftJoin("order_detail", "order_detail.product_id", "product.id")
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
