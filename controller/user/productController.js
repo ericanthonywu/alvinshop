@@ -59,7 +59,7 @@ exports.getProductByGenreAndCategory = (req, res) => {
         .select(
             "product.id as product_id",
             "title",
-            db.raw("CONCAT('uploads/produk/', product_image.image_name) as image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
