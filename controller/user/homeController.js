@@ -44,11 +44,12 @@ exports.ourPartner = (req, res) => {
 
 exports.recommendProduct = (req, res) => {
     db("product")
-        .distinct(
-            "product.id as product_id",
+        .select(
+            // "product.id as product_id",
             "title",
             db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
+        .distinct("order_detail.product_id")
         .leftJoin("order_detail", "order_detail.product_id", "product.id")
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
@@ -58,7 +59,7 @@ exports.recommendProduct = (req, res) => {
                 .toQuery()})`)
         )
         .where('stock', '>', 0)
-        // .orderBy("order_detail.product_id", "desc")
+        .orderBy("order_detail.product_id", "desc")
         .limit(5)
         .then(data => res.status(200).json({message: "recommend product", data}))
         .catch(err => res.status(500).json(err))
