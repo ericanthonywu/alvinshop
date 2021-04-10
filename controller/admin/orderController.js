@@ -14,6 +14,7 @@ exports.showOrder = (req, res) => {
             "order_code",
             "total_price",
             "user.username",
+            "user.email as user_email",
             "ordered_at",
             "file",
             "nama_rekening",
