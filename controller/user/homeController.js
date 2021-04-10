@@ -14,6 +14,9 @@ exports.bannerUser = (req, res) => {
 
 exports.searchProduct = (req, res) => {
     const {keyword} = req.query
+    if (!keyword){
+        return res.status(400).json({message: "keyword needed"})
+    }
     db("product")
         .whereRaw(`MATCH (title) AGAINST (:keyword IN BOOLEAN MODE)`,
             {keyword: `${keyword}*`})
