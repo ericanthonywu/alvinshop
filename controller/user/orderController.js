@@ -44,10 +44,15 @@ exports.showCart = (req, res) => {
             "product.stock as product_stock",
             "product.discount as product_discount",
             "product.title as product_title",
-            db.raw("CONCAT('uploads/produk/', pim.image_name) as product_image")
+            db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
-        .leftJoin("product_image", "product_image.product_id", "product.id")
-        .joinRaw("join (select id, image_name from product_image where product_id = product_image.product_id limit 1) pim on pim.id = `product_image`.id")
+        .leftJoin("product_image", "product_image.id",
+            db.raw(`(${db("product_image")
+                .select('id')
+                .where({product_id: db.raw("product.id")})
+                .limit(1)
+                .toQuery()})`)
+        )
         .then(data => res.status(200).json({message: "cart data", data}))
         .catch(err => res.status(500).json(err))
 }

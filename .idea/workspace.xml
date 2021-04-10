@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881873cf-a81b-4e87-9708-418e9a51b9b0" name="Default Changelist" comment="remove validation">
-      <change beforePath="$PROJECT_DIR$/controller/admin/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/admin/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +136,8 @@
       <workItem from="1617198845303" duration="190000" />
       <workItem from="1617734624534" duration="357000" />
       <workItem from="1617800762544" duration="6304000" />
-      <workItem from="1617963798307" duration="1954000" />
-    </task>
-    <task id="LOCAL-00029" summary="update">
-      <created>1609395101176</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1609395101176</updated>
+      <workItem from="1617963798307" duration="2627000" />
+      <workItem from="1618053112031" duration="247000" />
     </task>
     <task id="LOCAL-00030" summary="update">
       <created>1610640768754</created>
@@ -481,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617971832853</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="remove validation">
+      <created>1617971878990</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1617971878990</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
