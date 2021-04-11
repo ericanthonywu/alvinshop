@@ -47,6 +47,9 @@ exports.ourPartner = (req, res) => {
 
 exports.recommendProduct = (req, res) => {
     const {deviceId} = req.body
+    if (!deviceId){
+        return res.status(400).json({message: "deviceId is required"})
+    }
     db("product")
         .distinct(
             "product.id as product_id",
@@ -72,6 +75,9 @@ exports.recommendProduct = (req, res) => {
 
 exports.todayOffer = (req, res) => {
     const {deviceId} = req.body
+    if (!deviceId){
+        return res.status(400).json({message: "deviceId is required"})
+    }
     db("product")
         .select(
             "product.id as product_id",
