@@ -46,12 +46,14 @@ exports.ourPartner = (req, res) => {
 }
 
 exports.recommendProduct = (req, res) => {
+    const {deviceId} = req.body
     db("product")
         .distinct(
             "product.id as product_id",
             "title",
             db.raw("CONCAT('uploads/produk/', product_image.image_name) as product_image")
         )
+        .join('device','device.product_id','product.id')
         .leftJoin("order_detail", "order_detail.product_id", "product.id")
         .leftJoin("product_image", "product_image.id",
             db.raw(`(${db("product_image")
@@ -60,6 +62,7 @@ exports.recommendProduct = (req, res) => {
                 .limit(1)
                 .toQuery()})`)
         )
+        .where({"device.device_id": deviceId})
         .where('stock', '>', 0)
         // .orderBy("order_detail.product_id", "desc")
         .limit(5)
@@ -68,6 +71,7 @@ exports.recommendProduct = (req, res) => {
 }
 
 exports.todayOffer = (req, res) => {
+    const {deviceId} = req.body
     db("product")
         .select(
             "product.id as product_id",
@@ -81,6 +85,8 @@ exports.todayOffer = (req, res) => {
                 .limit(1)
                 .toQuery()})`)
         )
+        .join('device','device.product_id','product.id')
+        .where({"device.device_id": deviceId})
         .orderBy("product.created_at", "desc")
         .limit(5)
         .then(data => res.status(200).json({message: "todays offer product", data}))
